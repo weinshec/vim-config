@@ -27,11 +27,15 @@ For the documentation of each plugin, refer to the plugins help or github page.
 
 ## Installation
 
-Simply clone this repository to your $HOME/.vim folder and copy the included vimrc to your $HOME directory:
+Clone this repository to your $HOME/.vim folder and copy the included vimrc to your $HOME directory.
+Then change to repository directory and initlize and update the submodules
 
     cd $HOME
     git clone https://github.com/weinshec/vim-config .vim
-    cp .vim/vimrc ./.vimrc
+    cd .vim
+    cp vimrc ../.vimrc
+    git submodule init
+    git submodule update
 
 If you are facing trouble, try removing the .vim folder in the first place
 

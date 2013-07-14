@@ -3,7 +3,8 @@ vim-config
 
 My personal collection of vim configurations
 
-------
+
+## Description
 
 This repository is intended to be a personal collection of VIM configurations and plugins. Since I have to work on serveral machines every day, I find it handy to have a central repository to collect configuration and plugin files. When now starting work on a new machine, it just takes one command to have my complete vim setup ready. And further, it is easy to propagate changes in the configuration to all the other installations.
 
@@ -25,7 +26,6 @@ For the documentation of each plugin, refer to the plugins help or github page.
 
 
 ## Installation
-------
 
 Simply clone this repository to your $HOME/.vim folder and copy the included vimrc to your $HOME directory:
 

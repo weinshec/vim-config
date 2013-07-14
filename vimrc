@@ -15,12 +15,6 @@ set expandtab
 """"""""""""""""""""""""
 set laststatus=2
 
-""""""""""""""""
-"" netrw options
-""""""""""""""""
-"" tree view in file explorer
-let g:netrw_liststyle=3 
-
 """"""""""""""""""""""""""
 "" Pathogen Plugin Manager
 """"""""""""""""""""""""""

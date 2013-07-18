@@ -27,6 +27,11 @@ filetype plugin indent on
 """"""""""""""
 colorscheme m4ckColors
 
+"""""""""""""""""""
+"" Type Definitions
+"""""""""""""""""""
+au BufNewFile,BufRead *.conf set filetype=cfg
+
 """"""""""""""""""
 "" OmniCppComplete
 """"""""""""""""""

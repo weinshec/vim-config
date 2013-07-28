@@ -1,19 +1,15 @@
-""""""""""""""
-"" LineNumbers
-""""""""""""""
+"""""""""""""""
+"" General Sets
+"""""""""""""""
 set number
-
-"""""""""""
-"" TabWidth
-""""""""""""
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
-""""""""""""""""""""""""
-"" Permamenet status bar
-""""""""""""""""""""""""
 set laststatus=2
+set nowrap
+set autoindent
+set gdefault
+set wildmenu
 
 """"""""""""""""""""""""""
 "" Pathogen Plugin Manager
@@ -71,22 +67,41 @@ let g:NERDTreeDirArrows=0
 """"""""""""""
 let mapleader = ","
 
-""""""""""""""""
-"" Custom Maps
-""""""""""""""""
-"" Tasklist plugin
-map <leader>td <Plug>TaskList
-"" Tagbar plugin
+map <Leader>td <Plug>TaskList
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+map <Leader>e :e.<CR>
+
 nmap <F8> :TagbarToggle<CR>
-"" show syntax highlighting group for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
+nmap <C-W>u :call MergeTabs()<CR>
+
+command! Q q " Bind :Q to :q
+command! Qall qall 
+
+""""""""""""
+"" VimScript
+""""""""""""
+" Show type of object under curser
 function! <SID>SynStack()
     if !exists("*synstack")
         return
     endif
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
-"" type <leader>s for search/replace under cursor
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
+" Merge a tab into a split in the previous window
+function! MergeTabs()
+  if tabpagenr() == 1
+    return
+  endif
+  let bufferName = bufname("%")
+  if tabpagenr("$") == tabpagenr()
+    close!
+  else
+    close!
+    tabprev
+  endif
+  split
+  execute "buffer " . bufferName
+endfunction
 

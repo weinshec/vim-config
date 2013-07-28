@@ -74,6 +74,7 @@ map <Leader>e :e.<CR>
 nmap <F8> :TagbarToggle<CR>
 nmap <C-S-P> :call <SID>SynStack()<CR>
 nmap <C-W>u :call MergeTabs()<CR>
+imap ,, <Esc>
 
 command! Q q " Bind :Q to :q
 command! Qall qall 

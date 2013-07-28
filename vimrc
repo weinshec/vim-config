@@ -101,7 +101,7 @@ function! MergeTabs()
     close!
     tabprev
   endif
-  split
+  vsplit
   execute "buffer " . bufferName
 endfunction
 

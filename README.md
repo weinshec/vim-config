@@ -20,6 +20,7 @@ This repository is intended to be a personal collection of VIM configurations an
 + SnipMate (define custom language-dependent snipptes)
 + tagbar (list functions, methods, ets. in this file)
 + tasklist (toggle new tasks with TODO in comments)
++ CtrlP (FuzzyFinder for files)
 
 For the documentation of each plugin, refer to the plugins help or github page.
 

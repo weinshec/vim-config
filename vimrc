@@ -48,6 +48,11 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview"
 
+""""""""
+"" CtrlP
+""""""""
+set runtimepath^=~/.vim/bundle/ctrlp
+
 """"""""""""""""
 "" Spellchecking
 """"""""""""""""
@@ -70,6 +75,7 @@ let mapleader = ","
 map <Leader>td <Plug>TaskList
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 map <Leader>e :e.<CR>
+nmap <Leader>f :CtrlP<CR>
 
 nmap <F8> :TagbarToggle<CR>
 nmap <C-S-P> :call <SID>SynStack()<CR>
@@ -78,6 +84,17 @@ imap ,, <Esc>
 
 command! Q q " Bind :Q to :q
 command! Qall qall 
+
+"""""""""""""""""""""
+"" Wildcard ignorance
+"""""""""""""""""""""
+set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(root|tar.gz|o|so|zip)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 """"""""""""
 "" VimScript

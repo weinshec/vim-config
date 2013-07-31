@@ -75,12 +75,14 @@ let mapleader = ","
 map <Leader>td <Plug>TaskList
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 map <Leader>e :e.<CR>
-nmap <Leader>f :CtrlP<CR>
+map <Leader>f :CtrlP<CR>
+map <Leader>m :!make<CR>
+map <Leader>mc :!make clean<CR>
 
 nmap <F8> :TagbarToggle<CR>
 nmap <C-S-P> :call <SID>SynStack()<CR>
 nmap <C-W>u :call MergeTabs()<CR>
-imap ,, <Esc>
+imap qq <Esc>
 
 command! Q q " Bind :Q to :q
 command! Qall qall 

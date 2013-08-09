@@ -36,17 +36,22 @@ set tags+=$HOME/.vim/tags/cpp
 set tags+=$HOME/.vim/tags/root
 set tags+=$WORKSPACE_PATH/tags
 map <C-F12> :!ctags -R --sort=yes --c++-kinds=+pl --fields=+iaS --extra=+q .<CR>
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
+let OmniCpp_NamespaceSearch     = 1
+let OmniCpp_GlobalScopeSearch   = 1
+let OmniCpp_ShowAccess          = 1
 let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+let OmniCpp_MayCompleteDot      = 1 " autocomplete after .
+let OmniCpp_MayCompleteArrow    = 1 " autocomplete after ->
+let OmniCpp_MayCompleteScope    = 1 " autocomplete after ::
+let OmniCpp_DefaultNamespaces   = ["std", "_GLIBCXX_STD"]
 " automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview"
+
+"""""""""""""""""""""
+"" OmniPythonComplete
+"""""""""""""""""""""
+au FileType python set omnifunc=pythoncomplete#Complete
 
 """"""""
 "" CtrlP
@@ -78,11 +83,13 @@ map <Leader>e :e.<CR>
 map <Leader>f :CtrlP<CR>
 map <Leader>m :!make<CR>
 map <Leader>mc :!make clean<CR>
+vnoremap <Leader>t= :Tab/=<CR>
+vnoremap <Leader>t, :Tab/,<CR>
 
 nmap <F8> :TagbarToggle<CR>
 nmap <C-S-P> :call <SID>SynStack()<CR>
 nmap <C-W>u :call MergeTabs()<CR>
-imap qq <Esc>
+inoremap jk <Esc>
 
 command! Q q " Bind :Q to :q
 command! Qall qall 

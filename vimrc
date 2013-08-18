@@ -10,6 +10,9 @@ set nowrap
 set autoindent
 set gdefault
 set wildmenu
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
 
 """"""""""""""""""""""""""
 "" Pathogen Plugin Manager

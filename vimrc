@@ -88,6 +88,8 @@ map <Leader>m :!make<CR>
 map <Leader>mc :!make clean<CR>
 vnoremap <Leader>t= :Tab/=<CR>
 vnoremap <Leader>t, :Tab/,<CR>
+vnoremap <Leader>t) :Tab/)<CR>
+vnoremap <Leader>t( :Tab/(<CR>
 
 nmap <F8> :TagbarToggle<CR>
 nmap <C-S-P> :call <SID>SynStack()<CR>

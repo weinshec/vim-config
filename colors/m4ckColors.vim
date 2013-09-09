@@ -13,7 +13,7 @@ highlight StatusLineNC   ctermfg=250  ctermbg=25   cterm=NONE
 """"""""""""
 "" C++ stuff
 """"""""""""
-highlight cString        ctermfg=196  ctermbg=NONE  cterm=NONE 
+highlight cString        ctermfg=209  ctermbg=NONE  cterm=NONE 
 highlight cType          ctermfg=46   ctermbg=NONE  cterm=NONE
 highlight cNumbers       ctermfg=141  ctermbg=NONE  cterm=NONE
 highlight cppStructure   ctermfg=14   ctermbg=NONE  cterm=NONE
@@ -30,5 +30,7 @@ highlight texStatement   ctermfg=46   ctermbg=NONE  cterm=NONE
 """""""""""""""
 "" Python stuff
 """""""""""""""
+highlight pythonInclude ctermfg=39    ctermbg=NONE    cterm=bold
 highlight link pythonComment    cCommentL
 highlight link pythonString     cString 
+highlight link pythonNumber     cNumbers

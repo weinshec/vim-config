@@ -92,7 +92,7 @@ vnoremap <Leader>t) :Tab/)<CR>
 vnoremap <Leader>t( :Tab/(<CR>
 
 nmap <F8> :TagbarToggle<CR>
-nmap <C-S-P> :call <SID>SynStack()<CR>
+nmap <F10> :call <SID>SynStack()<CR>
 nmap <C-W>u :call MergeTabs()<CR>
 inoremap jk <Esc>
 

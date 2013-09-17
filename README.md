@@ -11,7 +11,7 @@ This repository is intended to be a personal collection of VIM configurations an
 
 **The complete list of plugins:**
 + Pathogen (easy plugin manager)
-+ Powerline (fancy bottom status line)
++ Lighline (fancy bottom status line)
 + NERDTree (new file explorer)
 + tabular (easy block alignment, like auto-intend)
 + vim-easymotion (fast cursor repositioning)
@@ -19,7 +19,6 @@ This repository is intended to be a personal collection of VIM configurations an
 + NERDCommenter (easy comment lines or blocks)
 + SnipMate (define custom language-dependent snipptes)
 + tagbar (list functions, methods, ets. in this file)
-+ tasklist (toggle new tasks with TODO in comments)
 + CtrlP (FuzzyFinder for files)
 
 For the documentation of each plugin, refer to the plugins help or github page.

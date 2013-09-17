@@ -80,7 +80,6 @@ let g:NERDTreeDirArrows=0
 """"""""""""""
 let mapleader = ","
 
-map <Leader>td <Plug>TaskList
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 map <Leader>e :e.<CR>
 map <Leader>f :CtrlP<CR>

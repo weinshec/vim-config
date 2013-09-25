@@ -15,7 +15,6 @@ This repository is intended to be a personal collection of VIM configurations an
 + NERDTree (new file explorer)
 + tabular (easy block alignment, like auto-intend)
 + vim-easymotion (fast cursor repositioning)
-+ LaTeX-Box (latex support)
 + NERDCommenter (easy comment lines or blocks)
 + SnipMate (define custom language-dependent snipptes)
 + tagbar (list functions, methods, ets. in this file)

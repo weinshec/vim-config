@@ -1,6 +1,9 @@
 """""""""""""""
 "" General Sets
 """""""""""""""
+
+autocmd! bufwritepost .vimrc source %
+
 set number
 set tabstop=4
 set shiftwidth=4
@@ -10,56 +13,40 @@ set nowrap
 set autoindent
 set gdefault
 set wildmenu
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
+set history=700
+set undolevels=700
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set nobackup
+set nowritebackup
+set noswapfile
+set pastetoggle=<F2>
+set clipboard=unnamedplus
+
 
 """"""""""""""""""""""""""
 "" Pathogen Plugin Manager
 """"""""""""""""""""""""""
 execute pathogen#infect()
+
+""""""""""""""""""""""
+"" Syntax highlighting
+""""""""""""""""""""""
 syntax on
 filetype plugin indent on
 
 """"""""""""""
 "" Colorscheme
 """"""""""""""
+set t_Co=256
 colorscheme m4ckColors
 
 """""""""""""""""""
 "" Type Definitions
 """""""""""""""""""
 au BufNewFile,BufRead *.conf set filetype=cfg
-
-""""""""""""""""""
-"" OmniCppComplete
-""""""""""""""""""
-set nocp
-set tags+=$HOME/.vim/tags/cpp
-set tags+=$HOME/.vim/tags/root
-set tags+=$WORKSPACE_PATH/tags
-map <C-F12> :!ctags -R --sort=yes --c++-kinds=+pl --fields=+iaS --extra=+q .<CR>
-let OmniCpp_NamespaceSearch     = 1
-let OmniCpp_GlobalScopeSearch   = 1
-let OmniCpp_ShowAccess          = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot      = 1 " autocomplete after .
-let OmniCpp_MayCompleteArrow    = 1 " autocomplete after ->
-let OmniCpp_MayCompleteScope    = 1 " autocomplete after ::
-let OmniCpp_DefaultNamespaces   = ["std", "_GLIBCXX_STD"]
-" automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-set completeopt=menuone,menu,longest,preview"
-
-"""""""""""""""""""""
-"" OmniPythonComplete
-"""""""""""""""""""""
-au FileType python set omnifunc=pythoncomplete#Complete
-
-""""""""
-"" CtrlP
-""""""""
-set runtimepath^=~/.vim/bundle/ctrlp
 
 """"""""""""""""
 "" Spellchecking
@@ -76,13 +63,29 @@ endif
 let g:NERDTreeDirArrows=0
 
 """"""""""""""
-"" Leader key
+"" MAPPINGS
 """"""""""""""
-let mapleader = ","
 
+nmap <F8> :TagbarToggle<CR>
+nmap <F10> :call <SID>SynStack()<CR>
+nmap <C-W>u :call MergeTabs()<CR>
+inoremap jk <Esc>
+noremap <C-n> :nohl<CR>
+vnoremap <C-n> :nohl<CR>
+inoremap <C-n> :nohl<CR>
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+map <s-h> <esc>:tabprevious<CR>
+map <s-l> <esc>:tabnext<CR>
+vnoremap < <gv  " better indentation
+vnoremap > >gv  " better indentation
+
+"" Leader key combinations
+let mapleader = ","
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 map <Leader>e :e.<CR>
-map <Leader>f :CtrlP<CR>
 map <Leader>m :!make<CR>
 map <Leader>mc :!make clean<CR>
 vnoremap <Leader>t= :Tab/=<CR>
@@ -90,24 +93,22 @@ vnoremap <Leader>t, :Tab/,<CR>
 vnoremap <Leader>t) :Tab/)<CR>
 vnoremap <Leader>t( :Tab/(<CR>
 
-nmap <F8> :TagbarToggle<CR>
-nmap <F10> :call <SID>SynStack()<CR>
-nmap <C-W>u :call MergeTabs()<CR>
-inoremap jk <Esc>
 
 command! Q q " Bind :Q to :q
 command! Qall qall 
 
-"""""""""""""""""""""
-"" Wildcard ignorance
-"""""""""""""""""""""
-set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip
 
+""""""""
+"" CtrlP
+""""""""
+set runtimepath^=~/.vim/bundle/ctrlp
+set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(root|tar.gz|o|so|zip)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+
 
 """"""""""""
 "" VimScript

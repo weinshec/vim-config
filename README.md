@@ -15,6 +15,7 @@ This repository is intended to be a personal collection of VIM configurations an
 + tabular (https://github.com/godlygeek/tabular)
 + tagbar (https://github.com/majutsushi/tagbar)
 + CtrlP (https://github.com/kien/ctrlp.vim)
++ Jedi-vim (https://github.com/davidhalter/jedi-vim)
 
 **Currently missing plugins:**
 + Snipptes

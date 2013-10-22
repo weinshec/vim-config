@@ -24,6 +24,7 @@ set nowritebackup
 set noswapfile
 set pastetoggle=<F2>
 set clipboard=unnamedplus
+set bs=2
 
 
 """"""""""""""""""""""""""

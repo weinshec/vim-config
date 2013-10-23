@@ -82,6 +82,8 @@ map <s-h> <esc>:tabprevious<CR>
 map <s-l> <esc>:tabnext<CR>
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
+noremap <Space> i<Space><Esc>l
+map <F9> :call ToggleShowWidth()<CR>
 
 "" Leader key combinations
 let mapleader = ","
@@ -114,6 +116,15 @@ let g:ctrlp_custom_ignore = {
 """"""""""""
 "" VimScript
 """"""""""""
+" Toggle display of 80th column
+function! ToggleShowWidth()
+    if &cc > 0
+        let &cc = 0
+    else
+        let &cc = 80
+    endif
+endfunc
+
 " Show type of object under curser
 function! <SID>SynStack()
     if !exists("*synstack")

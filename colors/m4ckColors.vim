@@ -8,6 +8,7 @@ let g:colors_name = "m4ck colors"
 highlight LineNr         ctermfg=250  ctermbg=239  cterm=bold
 highlight StatusLine     ctermfg=256  ctermbg=25   cterm=bold
 highlight StatusLineNC   ctermfg=250  ctermbg=25   cterm=NONE
+highlight ColorColumn    ctermfg=NONE ctermbg=245  cterm=NONE
 
 
 """"""""""""

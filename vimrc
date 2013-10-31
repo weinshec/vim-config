@@ -108,7 +108,7 @@ set runtimepath^=~/.vim/bundle/ctrlp
 set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(root|tar.gz|o|so|zip)$',
+  \ 'file': '\v\.(root|tar.gz|o|so|zip|pdf|eps)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
@@ -120,8 +120,10 @@ let g:ctrlp_custom_ignore = {
 function! ToggleShowWidth()
     if &cc > 0
         let &cc = 0
+        let &textwidth = 0
     else
         let &cc = 80
+        let &textwidth = 79
     endif
 endfunc
 

@@ -17,6 +17,7 @@ This repository is intended to be a personal collection of VIM configurations an
 + CtrlP (https://github.com/kien/ctrlp.vim)
 + Jedi-vim (https://github.com/davidhalter/jedi-vim)
 + vim-commentary (https://github.com/tpope/vim-commentary)
++ vim-startify (https://github.com/mhinz/vim-startify)
 
 **Currently missing plugins:**
 + Snipptes

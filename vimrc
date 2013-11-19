@@ -100,6 +100,37 @@ vnoremap <Leader>t( :Tab/(<CR>
 command! Q q " Bind :Q to :q
 command! Qall qall 
 
+"""""""""""
+"" Startify
+"""""""""""
+" Highlight the acsii banner with green font
+hi StartifyHeader ctermfg=39
+" Don't change the directory when opening a recent file with a shortcut
+let g:startify_change_to_dir = 0
+" Set the contents of the banner
+let g:startify_custom_header = [
+            \ '                 ______                 ',
+            \ '              _-´ .   .`-_              ',
+            \ '          |/ /  .. . +   .\ \|          ',
+            \ '         |/ /            ..\ \|         ',
+            \ '       \|/ |: .   ._|_ .. . | \|/       ',
+            \ '        \/ |   _|_ .| . .:  | \/        ',
+            \ '       \ / |.   |  .  .    .| \ /       ',
+            \ '        \||| .  . .  _|_   .|||/        ',
+            \ '       \__| \  . :.  .|.  ./ |__/       ',
+            \ '         __| \_  .    .. _/ |__         ',
+            \ '          __|  `-______-´  |__          ',
+            \ '             -,____  ____,-             ',
+            \ '               ---´  `---               ',
+            \ '      UNITED FEDERATION OF PLANETS      ',
+            \ '                                        ',
+            \]
+" List recently used files using viminfo.
+let g:startify_show_files = 1
+" The number of files to list.
+let g:startify_show_files_number = 7
+" A list of files to bookmark. Always shown
+let g:startify_bookmarks = [ '~/.vimrc' ]
 
 """"""""
 "" CtrlP
@@ -111,6 +142,8 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(root|tar.gz|o|so|zip|pdf|eps)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+" Make startify not open ctrlp in a new buffer
+let g:ctrlp_reuse_window = 'startify'
 
 
 """"""""""""

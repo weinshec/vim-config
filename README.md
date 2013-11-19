@@ -16,10 +16,10 @@ This repository is intended to be a personal collection of VIM configurations an
 + tagbar (https://github.com/majutsushi/tagbar)
 + CtrlP (https://github.com/kien/ctrlp.vim)
 + Jedi-vim (https://github.com/davidhalter/jedi-vim)
++ vim-commentary (https://github.com/tpope/vim-commentary)
 
 **Currently missing plugins:**
 + Snipptes
-+ Commenter
 
 For the documentation of each plugin, refer to the plugins help or github page.
 

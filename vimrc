@@ -4,6 +4,7 @@
 
 autocmd! bufwritepost .vimrc source %
 
+set nocompatible
 set number
 set tabstop=4
 set shiftwidth=4

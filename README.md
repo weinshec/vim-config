@@ -20,6 +20,7 @@ This repository is intended to be a personal collection of VIM configurations an
 + vim-startify (https://github.com/mhinz/vim-startify)
 + NERDTree (https://github.com/scrooloose/nerdtree)
 + Syntastic (https://github.com/scrooloose/syntastic)
++ vimwiki (https://github.com/vimwiki/vimwiki)
 
 **Currently missing plugins:**
 + Snipptes

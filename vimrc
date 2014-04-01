@@ -147,6 +147,10 @@ let g:ctrlp_custom_ignore = {
 " Make startify not open ctrlp in a new buffer
 let g:ctrlp_reuse_window = 'startify'
 
+""""""""""
+"" vimwiki
+""""""""""
+let g:vimwiki_list = [{'path': '~/org/', 'path_html': '~/org/public_html/'}]
 
 """"""""""""
 "" VimScript

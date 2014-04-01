@@ -21,6 +21,7 @@ This repository is intended to be a personal collection of VIM configurations an
 + NERDTree (https://github.com/scrooloose/nerdtree)
 + Syntastic (https://github.com/scrooloose/syntastic)
 + vimwiki (https://github.com/vimwiki/vimwiki)
++ vim-fugitive (https://github.com/tpope/vim-fugitive)
 
 **Currently missing plugins:**
 + Snipptes

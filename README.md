@@ -18,6 +18,8 @@ This repository is intended to be a personal collection of VIM configurations an
 + Jedi-vim (https://github.com/davidhalter/jedi-vim)
 + vim-commentary (https://github.com/tpope/vim-commentary)
 + vim-startify (https://github.com/mhinz/vim-startify)
++ NERDTree (https://github.com/scrooloose/nerdtree)
++ Syntastic (https://github.com/scrooloose/syntastic)
 
 **Currently missing plugins:**
 + Snipptes
@@ -33,8 +35,8 @@ Then change to repository directory and initlize and update the submodules
 
     cd $HOME
     git clone https://github.com/weinshec/vim-config .vim
+    ln -s $HOME/.vim/vimrc $HOME/.vimrc
     cd .vim
-    cp vimrc ../.vimrc
     git submodule init
     git submodule update
 

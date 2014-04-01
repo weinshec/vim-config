@@ -67,6 +67,7 @@ let g:NERDTreeDirArrows=0
 "" MAPPINGS
 """"""""""""""
 
+nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 nmap <F10> :call <SID>SynStack()<CR>
 nmap <C-W>u :call MergeTabs()<CR>

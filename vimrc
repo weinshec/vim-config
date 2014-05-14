@@ -27,6 +27,11 @@ set pastetoggle=<F2>
 set clipboard=unnamedplus
 set bs=2
 
+"" GUI options
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+
 
 """"""""""""""""""""""""""
 "" Pathogen Plugin Manager
@@ -150,7 +155,7 @@ let g:ctrlp_reuse_window = 'startify'
 """"""""""
 "" vimwiki
 """"""""""
-let g:vimwiki_list = [{'path': '~/org/', 'path_html': '~/org/public_html/'}]
+let g:vimwiki_list = [{'path': '~/wiki/', 'path_html': '~/wiki/public_html/'}]
 
 """"""""""""
 "" VimScript

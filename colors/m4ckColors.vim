@@ -5,10 +5,18 @@ if exists("syntax_on")
 endif
 let g:colors_name = "m4ck colors"
 
-highlight LineNr         ctermfg=250  ctermbg=239  cterm=bold
-highlight StatusLine     ctermfg=256  ctermbg=25   cterm=bold
-highlight StatusLineNC   ctermfg=250  ctermbg=25   cterm=NONE
-highlight ColorColumn    ctermfg=NONE ctermbg=245  cterm=NONE
+highlight Normal guifg=white guibg=#2e3436
+
+highlight LineNr         ctermfg=250     ctermbg=239     cterm=bold
+highlight LineNr         guifg=#bcbcbc   guibg=#4e4e4e   gui=bold
+highlight StatusLine     ctermfg=255     ctermbg=25      cterm=bold
+highlight StatusLine     guifg=#eeeeee   guibg=#005faf   gui=bold
+highlight StatusLineNC   ctermfg=250     ctermbg=25      cterm=NONE
+highlight StatusLineNC   guifg=#bcbcbc   guibg=#005faf   gui=NONE
+highlight ColorColumn    ctermfg=NONE    ctermbg=245     cterm=NONE
+highlight ColorColumn    guifg=NONE      guibg=#8a8a8a   gui=NONE
+highlight NonText        ctermfg=12      ctermbg=NONE    cterm=NONE
+highlight NonText        guifg=#729fcf   guibg=NONE      gui=NONE
 
 
 """"""""""""

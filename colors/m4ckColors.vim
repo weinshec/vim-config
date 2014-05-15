@@ -1,9 +1,9 @@
 set background=dark
 highlight clear
-if exists("syntax_on")
-    syntax reset
-endif
-let g:colors_name = "m4ck colors"
+" if exists("syntax_on")
+"     syntax reset
+" endif
+let g:colors_name = "m4ckColors"
 
 highlight Normal guifg=white guibg=#2e3436
 

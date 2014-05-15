@@ -48,7 +48,12 @@ filetype plugin indent on
 "" Colorscheme
 """"""""""""""
 set t_Co=256
-colorscheme m4ckColors
+
+if has('gui_running')
+    colorscheme monokai
+else
+    colorscheme m4ckColors
+endif
 
 """""""""""""""""""
 "" Type Definitions

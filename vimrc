@@ -38,11 +38,13 @@ set guioptions-=L
 """"""""""""""""""""""""""
 execute pathogen#infect()
 
+
 """"""""""""""""""""""
 "" Syntax highlighting
 """"""""""""""""""""""
 syntax on
 filetype plugin indent on
+
 
 """"""""""""""
 "" Colorscheme
@@ -55,10 +57,12 @@ else
     colorscheme m4ckColors
 endif
 
+
 """""""""""""""""""
 "" Type Definitions
 """""""""""""""""""
 au BufNewFile,BufRead *.conf set filetype=cfg
+
 
 """"""""""""""""
 "" Spellchecking
@@ -69,15 +73,16 @@ if v:version >= 700
     set nospell
 endif
 
+
 """""""""""
 "" Encoding
 """""""""""
 let g:NERDTreeDirArrows=0
 
+
 """"""""""""""
 "" MAPPINGS
 """"""""""""""
-
 nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 nmap <F10> :call <SID>SynStack()<CR>
@@ -111,6 +116,15 @@ vnoremap <Leader>t( :Tab/(<CR>
 
 command! Q q " Bind :Q to :q
 command! Qall qall 
+command! W w " Bind :W to :w
+
+
+"""""""""""
+"" NERDTree
+"""""""""""
+let NERDTreeChDirMode=0
+let NERDTreeHijackNetrw = 0
+
 
 """""""""""
 "" Startify
@@ -144,6 +158,7 @@ let g:startify_show_files_number = 7
 " A list of files to bookmark. Always shown
 let g:startify_bookmarks = [ '~/.vimrc' ]
 
+
 """"""""
 "" CtrlP
 """"""""
@@ -157,10 +172,12 @@ let g:ctrlp_custom_ignore = {
 " Make startify not open ctrlp in a new buffer
 let g:ctrlp_reuse_window = 'startify'
 
+
 """"""""""
 "" vimwiki
 """"""""""
 let g:vimwiki_list = [{'path': '~/wiki/', 'path_html': '~/wiki/public_html/'}]
+
 
 """"""""""""
 "" VimScript
@@ -199,4 +216,3 @@ function! MergeTabs()
   vsplit
   execute "buffer " . bufferName
 endfunction
-

@@ -22,9 +22,10 @@ This repository is intended to be a personal collection of VIM configurations an
 + Syntastic (https://github.com/scrooloose/syntastic)
 + vimwiki (https://github.com/vimwiki/vimwiki)
 + vim-fugitive (https://github.com/tpope/vim-fugitive)
++ UltiSnips (https://github.com/SirVer/ultisnips)
 
 **Currently missing plugins:**
-+ Snipptes
++ LaTeX mode
 
 For the documentation of each plugin, refer to the plugins help or github page.
 

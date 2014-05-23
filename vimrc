@@ -180,6 +180,13 @@ let g:vimwiki_list = [{'path': '~/wiki/', 'path_html': '~/wiki/public_html/'}]
 
 
 """"""""""""
+"" UltiSnips
+""""""""""""
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+""""""""""""
 "" VimScript
 """"""""""""
 " Toggle display of 80th column

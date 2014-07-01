@@ -1,3 +1,54 @@
 snippet #! "SheBang line"
 #!/usr/bin/env python
 endsnippet
+
+
+
+snippet doc "Global docstring"
+"""`!v expand('%:t')` - ${1:description}
+"""
+
+__author__ = "${2:Christoph Weinsheimer}"
+__email__  = "${3:weinshec@students.uni-mainz.de}"
+$0
+endsnippet
+
+
+
+snippet def "standard definition"
+def ${1:function}($2):
+	"""${3:description}
+
+	Args:
+	$4
+
+	Returns:
+	$5
+	"""
+	$0
+endsnippet
+
+
+
+snippet main "if __name__ == '__main__':"
+if __name__ == '__main__':
+	$0
+endsnippet
+
+
+
+snippet docopt "standard docopt parsing"
+# Parse cmdl arguments
+args = docopt(__doc__)
+
+$0
+endsnippet
+
+
+
+snippet debug "standard docopt debug flag"
+# Evaluate --debug flag
+if args['--debug']:
+	logging.basicConfig(level=logging.DEBUG)
+	logging.debug('cmdl args:\n%s' % args)
+endsnippet

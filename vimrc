@@ -84,7 +84,7 @@ let g:NERDTreeDirArrows=0
 "" MAPPINGS
 """"""""""""""
 nmap <F7> :NERDTreeToggle<CR>
-nmap <F8> :TagbarToggle<CR>
+nmap <F9> :TagbarToggle<CR>
 nmap <F10> :call <SID>SynStack()<CR>
 nmap <C-W>u :call MergeTabs()<CR>
 inoremap jk <Esc>
@@ -100,14 +100,14 @@ map <s-l> <esc>:tabnext<CR>
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 noremap <Space> i<Space><Esc>l
-map <F9> :call ToggleShowWidth()<CR>
+map <F8> :call ToggleShowWidth()<CR>
 
 "" Leader key combinations
 let mapleader = ","
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 map <Leader>e :e.<CR>
-map <Leader>m :!make<CR>
-map <Leader>mc :!make clean<CR>
+map <Leader>m :w <bar> !make<CR>
+map <Leader>mc :w <bar> !make clean<CR>
 vnoremap <Leader>t= :Tab/=<CR>
 vnoremap <Leader>t, :Tab/,<CR>
 vnoremap <Leader>t) :Tab/)<CR>

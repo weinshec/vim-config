@@ -173,12 +173,6 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_reuse_window = 'startify'
 
 
-""""""""""
-"" vimwiki
-""""""""""
-let g:vimwiki_list = [{'path': '~/wiki/', 'path_html': '~/wiki/public_html/'}]
-
-
 """"""""""""
 "" UltiSnips
 """"""""""""

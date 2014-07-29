@@ -31,6 +31,9 @@ set bs=2
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
+if has("gui_running")
+    set guifont=Droid\ Sans\ Mono\ 11
+endif
 
 
 """"""""""""""""""""""""""

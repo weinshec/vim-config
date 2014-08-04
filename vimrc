@@ -98,8 +98,8 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
-map <s-h> <esc>:tabprevious<CR>
-map <s-l> <esc>:tabnext<CR>
+map <s-h> :tabprevious<CR>
+map <s-l> :tabnext<CR>
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 noremap <Space> i<Space><Esc>l

@@ -64,6 +64,24 @@ endsnippet
 
 
 
+snippet (it "(\textit{*}"
+(\textit{$1}$0
+endsnippet
+
+
+
+snippet sc "\textsc{*}"
+\textsc{$1}$0
+endsnippet
+
+
+
+snippet (sc "(\textsc{*}"
+(\textsc{$1}$0
+endsnippet
+
+
+
 snippet mini "insert two minipages"
 \begin{minipage}{${1:0.5}\textwidth}
 	$3
@@ -103,3 +121,28 @@ endsnippet
 snippet frac "fraction"
 \frac{${1:1}}{${2:2}}$0
 endsnippet
+
+
+
+snippet sec "section"
+\section{${1:Section Title}}
+endsnippet
+
+
+
+snippet secs "section w/o numbering"
+\section*{${1:Section Title}}
+endsnippet
+
+
+
+snippet ssec "subsection"
+\subsection{${1:Subsection Title}}
+endsnippet
+
+
+
+snippet ssecs "subsection w/o numbering"
+\subsection*{${1:Subsection Title}}
+endsnippet
+

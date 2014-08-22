@@ -104,6 +104,10 @@ vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 noremap <Space> i<Space><Esc>l
 map <F8> :call ToggleShowWidth()<CR>
+nmap <c-CR> o<Esc>
+nmap <c-BS> O<Esc>
+nnoremap ü <c-]>
+nnoremap Ü <c-O>
 
 "" Leader key combinations
 let mapleader = ","

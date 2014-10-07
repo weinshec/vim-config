@@ -23,6 +23,7 @@ This repository is intended to be a personal collection of VIM configurations an
 + vim-fugitive (https://github.com/tpope/vim-fugitive)
 + UltiSnips (https://github.com/SirVer/ultisnips)
 + vim-markdown (https://github.com/plasticboy/vim-markdown)
++ riv.vim (https://github.com/Rykka/riv.vim)
 
 **Currently missing plugins:**
 + LaTeX mode

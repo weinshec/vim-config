@@ -26,6 +26,8 @@ set noswapfile
 set pastetoggle=<F2>
 set clipboard=unnamedplus
 set bs=2
+set foldmethod=syntax
+set foldlevel=1
 
 "" GUI options
 set guioptions-=T
@@ -82,7 +84,7 @@ let g:NERDTreeDirArrows=0
 "" MAPPINGS
 """"""""""""""
 nmap <F7> :NERDTreeToggle<CR>
-nmap <F9> :TagbarToggle<CR>
+nmap <F9> :call TableOfContents()<CR>
 nmap <F10> :call <SID>SynStack()<CR>
 nmap <C-W>u :call MergeTabs()<CR>
 inoremap jk <Esc>
@@ -99,8 +101,6 @@ vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 noremap <Space> i<Space><Esc>l
 map <F8> :call ToggleShowWidth()<CR>
-nmap <c-CR> o<Esc>
-nmap <c-BS> O<Esc>
 nnoremap ü <c-]>
 nnoremap Ü <c-O>
 
@@ -225,4 +225,13 @@ function! MergeTabs()
   endif
   vsplit
   execute "buffer " . bufferName
+endfunction
+
+" Map Key to Tagbar or RST-TOC
+function! TableOfContents()
+    if &filetype == "rst"
+        execute "RivHelpSection"
+    else
+        execute "TagbarToggle"
+    endif
 endfunction

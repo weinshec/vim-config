@@ -34,3 +34,6 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "bundle/riv.vim"]
+	path = bundle/riv.vim
+	url = https://github.com/Rykka/riv.vim

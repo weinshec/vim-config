@@ -189,6 +189,12 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:vim_markdown_initial_foldlevel=1
 
 
+""""""""""
+"" riv-vim
+""""""""""
+let g:riv_web_browser="chromium"
+
+
 """"""""""""
 "" VimScript
 """"""""""""

@@ -14,7 +14,7 @@ let g:colors_name = "monokai"
 hi IncSearch guifg=#C4BE89 guibg=#000000 guisp=#000000 gui=NONE ctermfg=186 ctermbg=NONE cterm=NONE
 hi WildMenu guifg=#66D9EF guibg=#000000 guisp=#000000 gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
 hi SignColumn guifg=#A6E22E guibg=#232526 guisp=#232526 gui=NONE ctermfg=112 ctermbg=235 cterm=NONE
-hi ColorColumn guifg=#A6E22E guibg=#4d4d4d guisp=#232526 gui=NONE ctermfg=112 ctermbg=235 cterm=NONE
+hi ColorColumn guifg=#A6E22E guibg=#4d4d4d guisp=#232526 gui=NONE ctermfg=NONE ctermbg=245 cterm=NONE
 hi SpecialComment guifg=#465457 guibg=NONE guisp=NONE gui=bold ctermfg=240 ctermbg=NONE cterm=bold
 hi Typedef guifg=#66D9EF guibg=NONE guisp=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
 hi Title guifg=#ef5939 guibg=NONE guisp=NONE gui=NONE ctermfg=209 ctermbg=NONE cterm=NONE

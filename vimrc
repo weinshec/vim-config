@@ -86,6 +86,7 @@ let g:NERDTreeDirArrows=0
 nmap <F7> :NERDTreeToggle<CR>
 nmap <F9> :call TableOfContents()<CR>
 nmap <F10> :call <SID>SynStack()<CR>
+nmap <F12> :Startify<CR>
 nmap <C-W>u :call MergeTabs()<CR>
 inoremap jk <Esc>
 noremap <C-n> :nohl<CR>

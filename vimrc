@@ -63,6 +63,11 @@ colorscheme monokai
 """""""""""""""""""
 au BufNewFile,BufRead *.conf set filetype=cfg
 
+au BufNewFile,BufRead *.py set foldmethod=indent
+au BufNewFile,BufRead *.py set foldlevel=0
+au BufNewFile,BufRead *.py set foldnestmax=2
+
+
 
 """"""""""""""""
 "" Spellchecking
@@ -100,10 +105,11 @@ map <s-h> :tabprevious<CR>
 map <s-l> :tabnext<CR>
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
-noremap <Space> i<Space><Esc>l
 map <F8> :call ToggleShowWidth()<CR>
 nnoremap ü <c-]>
 nnoremap Ü <c-O>
+nnoremap <space> za
+vnoremap <space> zf
 
 "" Leader key combinations
 let mapleader = ","

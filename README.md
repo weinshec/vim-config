@@ -25,6 +25,7 @@ This repository is intended to be a personal collection of VIM configurations an
 + vim-markdown (https://github.com/plasticboy/vim-markdown)
 + riv.vim (https://github.com/Rykka/riv.vim)
 + OmniCppComplete (https://github.com/vim-scripts/OmniCppComplete)
++ supertab (https://github.com/ervandew/supertab)
 
 **Currently missing plugins:**
 + LaTeX mode

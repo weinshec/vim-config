@@ -167,7 +167,8 @@ let NERDTreeHijackNetrw = 0
 "" Tagbar
 """""""""
 let g:tagbar_autoclose = 1
-let g:tagbar_autofocus = 1
+let g:tagbar_autofocus = 0
+let g:tagbar_sort      = 0
 let g:tagbar_type_python = {
     \ 'kinds' : [
         \ 'i:imports:1:0',

@@ -74,8 +74,7 @@ au BufNewFile,BufRead *.py set foldnestmax=2
 "" Spellchecking
 """"""""""""""""
 if v:version >= 700
-    ""setlocal spell spelllang=en_us
-    setlocal spell spelllang=de,en_us
+    setlocal spell spelllang=en_us
     set nospell
 endif
 
@@ -90,12 +89,11 @@ let g:NERDTreeDirArrows=0
 "" MAPPINGS
 """"""""""""""
 nmap <F7> :NERDTreeToggle<CR>
+nmap <F8> :call ToggleShowWidth()<CR>
 nmap <F9> :call TableOfContents()<CR>
 nmap <F10> :call <SID>SynStack()<CR>
-nmap <F12> :Startify<CR>
-nmap <C-W>u :call MergeTabs()<CR>
 inoremap jk <Esc>
-noremap <C-n> :nohl<CR>
+noremap  <C-n> :nohl<CR>
 vnoremap <C-n> :nohl<CR>
 inoremap <C-n> :nohl<CR>
 map <c-j> <c-w>j
@@ -106,7 +104,6 @@ map <s-h> :tabprevious<CR>
 map <s-l> :tabnext<CR>
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
-map <F8> :call ToggleShowWidth()<CR>
 nnoremap ü <c-]>
 nnoremap Ü <c-O>
 nnoremap <space> za
@@ -114,19 +111,20 @@ vnoremap <space> zf
 
 "" Leader key combinations
 let mapleader = ","
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-map <Leader>e :e.<CR>
-map <Leader>m :w <bar> !make<CR>
-map <Leader>mc :w <bar> !make clean<CR>
+nmap <Leader>s :set spell!<CR>
+nmap <Leader>r :%s/\<<C-r><C-w>\>/
+nmap <Leader>m :w <bar> !make<CR>
+nmap <Leader>mc :w <bar> !make clean<CR>
 vnoremap <Leader>t= :Tab/=<CR>
 vnoremap <Leader>t, :Tab/,<CR>
 vnoremap <Leader>t) :Tab/)<CR>
 vnoremap <Leader>t( :Tab/(<CR>
 
 
-command! Q q " Bind :Q to :q
-command! Qall qall 
-command! W w " Bind :W to :w
+command! Q q
+command! Qa qall 
+command! W w 
+command! Wq wq
 
 
 """""""""""

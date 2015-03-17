@@ -115,10 +115,17 @@ nmap <Leader>s :set spell!<CR>
 nmap <Leader>r :%s/\<<C-r><C-w>\>/
 nmap <Leader>m :w <bar> !make<CR>
 nmap <Leader>mc :w <bar> !make clean<CR>
-vnoremap <Leader>t= :Tab/=<CR>
-vnoremap <Leader>t, :Tab/,<CR>
-vnoremap <Leader>t) :Tab/)<CR>
-vnoremap <Leader>t( :Tab/(<CR>
+
+vmap <Leader>t= :Tab/=<CR>
+nmap <Leader>t= :Tab/=<CR>
+vmap <Leader>t, :Tab/,\zs<CR>
+nmap <Leader>t, :Tab/,\zs<CR>
+vmap <Leader>t) :Tab/)<CR>
+nmap <Leader>t) :Tab/)<CR>
+vmap <Leader>t( :Tab/(/l0c1l0<CR>
+nmap <Leader>t( :Tab/(/l0c1l0<CR>
+vmap <Leader>t: :Tab/:\zs<CR>
+nmap <Leader>t: :Tab/:\zs<CR>
 
 
 command! Q q

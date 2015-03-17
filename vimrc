@@ -260,7 +260,7 @@ set runtimepath^=~/.vim/bundle/ctrlp
 set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(root|tar.gz|o|so|zip|pdf|eps)$',
+  \ 'file': '\v\.(root|tar.gz|o|so|zip|pdf|eps|pyc)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
 " Make startify not open ctrlp in a new buffer

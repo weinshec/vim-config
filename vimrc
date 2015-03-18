@@ -156,6 +156,12 @@ let g:lightline = {
       \ }
 
 
+""""""""""""""""
+"" YouCompleteMe
+""""""""""""""""
+let g:ycm_global_ycm_extra_conf = '/home/weinshec/.vim/YCM/.ycm_extra_conf.py'
+
+
 """""""""""
 "" NERDTree
 """""""""""

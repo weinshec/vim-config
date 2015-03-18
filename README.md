@@ -15,20 +15,12 @@ This repository is intended to be a personal collection of VIM configurations an
 + tabular (https://github.com/godlygeek/tabular)
 + tagbar (https://github.com/majutsushi/tagbar)
 + CtrlP (https://github.com/kien/ctrlp.vim)
-+ Jedi-vim (https://github.com/davidhalter/jedi-vim)
 + vim-commentary (https://github.com/tpope/vim-commentary)
 + vim-startify (https://github.com/mhinz/vim-startify)
 + NERDTree (https://github.com/scrooloose/nerdtree)
 + Syntastic (https://github.com/scrooloose/syntastic)
 + vim-fugitive (https://github.com/tpope/vim-fugitive)
 + UltiSnips (https://github.com/SirVer/ultisnips)
-+ vim-markdown (https://github.com/plasticboy/vim-markdown)
-+ riv.vim (https://github.com/Rykka/riv.vim)
-+ OmniCppComplete (https://github.com/vim-scripts/OmniCppComplete)
-+ supertab (https://github.com/ervandew/supertab)
-
-**Currently missing plugins:**
-+ LaTeX mode
 
 For the documentation of each plugin, refer to the plugins help or github page.
 

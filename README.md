@@ -15,12 +15,12 @@ This repository is intended to be a personal collection of VIM configurations an
 + tabular (https://github.com/godlygeek/tabular)
 + tagbar (https://github.com/majutsushi/tagbar)
 + CtrlP (https://github.com/kien/ctrlp.vim)
-+ vim-commentary (https://github.com/tpope/vim-commentary)
 + vim-startify (https://github.com/mhinz/vim-startify)
 + Syntastic (https://github.com/scrooloose/syntastic)
 + vim-fugitive (https://github.com/tpope/vim-fugitive)
 + UltiSnips (https://github.com/SirVer/ultisnips)
 + delimitMate (https://github.com/Raimondi/delimitMate)
++ NERDcommenter (https://github.com/scrooloose/nerdcommenter)
 
 
 For the documentation of each plugin, refer to the plugins help or github page.

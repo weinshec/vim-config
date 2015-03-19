@@ -162,11 +162,21 @@ let g:lightline = {
 let g:ycm_global_ycm_extra_conf = '/home/weinshec/.vim/YCM/.ycm_extra_conf.py'
 
 
-"""""""""""
-"" NERDTree
-"""""""""""
-let NERDTreeChDirMode=0
-let NERDTreeHijackNetrw = 0
+""""""""""""
+"" Syntastic
+""""""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:ycm_show_diagnostics_ui = 0
+
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = '-L/usr/lib/root -I/usr/include/root -ansi -Wall -Wno-long-long -pedantic -pedantic-errors -fPIC -pthread -std=c++11 -Wno-deprecated-declarations -m64 -I/usr/include/root'
 
 
 """""""""
@@ -184,46 +194,6 @@ let g:tagbar_type_python = {
         \ 'v:variables:1:0',
     \ ],
 \ }
-
-
-""""""""""""""""""
-"" OmniCppComplete
-""""""""""""""""""
-" --- OmniCppComplete ---
-" -- required --
-set nocp " non vi compatible mode
-
-" -- optional --
-" auto close options when exiting insert mode or moving away
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-set completeopt=menu,menuone
-
-" -- configs --
-let OmniCpp_MayCompleteDot = 1 " autocomplete with .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete with ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete with ::
-let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert)
-let OmniCpp_NamespaceSearch = 2 " search namespaces in this and included files
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
-let OmniCpp_LocalSearchDecl = 1 " don't require special style of function opening braces
-
-" -- ctags --
-map <S-F5> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/commontags /usr/include /usr/local/include
-set tags+=~/.vim/commontags
-
-map <F5> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
-set tags+=./tags
-
-" Setup the tab key to do autocompletion
-function! CompleteTab()
-    let prec = strpart( getline('.'), 0, col('.')-1 )
-    if prec =~ '^\s*$' || prec =~ '\s$'
-        return "\"
-    else
-        return "\\"
-    endif
-endfunction
 
 
 """""""""""
@@ -279,18 +249,6 @@ let g:ctrlp_reuse_window = 'startify'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-
-"""""""""""
-"" Markdown
-"""""""""""
-let g:vim_markdown_initial_foldlevel=1
-
-
-""""""""""
-"" riv-vim
-""""""""""
-let g:riv_web_browser="chromium"
 
 
 """"""""""""

@@ -32,3 +32,6 @@
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe
     ignore = dirty
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate

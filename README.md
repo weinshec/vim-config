@@ -21,6 +21,8 @@ This repository is intended to be a personal collection of VIM configurations an
 + Syntastic (https://github.com/scrooloose/syntastic)
 + vim-fugitive (https://github.com/tpope/vim-fugitive)
 + UltiSnips (https://github.com/SirVer/ultisnips)
++ delimitMate (https://github.com/Raimondi/delimitMate)
+
 
 For the documentation of each plugin, refer to the plugins help or github page.
 

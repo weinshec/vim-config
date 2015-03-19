@@ -17,7 +17,6 @@ This repository is intended to be a personal collection of VIM configurations an
 + CtrlP (https://github.com/kien/ctrlp.vim)
 + vim-commentary (https://github.com/tpope/vim-commentary)
 + vim-startify (https://github.com/mhinz/vim-startify)
-+ NERDTree (https://github.com/scrooloose/nerdtree)
 + Syntastic (https://github.com/scrooloose/syntastic)
 + vim-fugitive (https://github.com/tpope/vim-fugitive)
 + UltiSnips (https://github.com/SirVer/ultisnips)

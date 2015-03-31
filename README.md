@@ -21,6 +21,7 @@ This repository is intended to be a personal collection of VIM configurations an
 + UltiSnips (https://github.com/SirVer/ultisnips)
 + delimitMate (https://github.com/Raimondi/delimitMate)
 + NERDcommenter (https://github.com/scrooloose/nerdcommenter)
++ colorizer (https://github.com/lilydjwg/colorizer)
 
 
 For the documentation of each plugin, refer to the plugins help or github page.

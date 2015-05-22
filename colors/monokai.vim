@@ -121,3 +121,5 @@ hi user1                                  guifg=#00ff8b guibg=#3e3e5e guisp=#3e3
 hi doxygenspecialonelinedesc              guifg=#ad600b guibg=NONE    guisp=NONE    gui=NONE        ctermfg=130  ctermbg=NONE cterm=NONE
 hi doxygencomment                         guifg=#ad7b20 guibg=NONE    guisp=NONE    gui=NONE        ctermfg=130  ctermbg=NONE cterm=NONE
 hi cspecialcharacter                      guifg=#c080d0 guibg=#404040 guisp=#404040 gui=NONE        ctermfg=176  ctermbg=238  cterm=NONE
+hi rstStrongEmphasis                      guifg=NONE    guibg=NONE    guisp=NONE    gui=bold        ctermfg=NONE ctermbg=238  cterm=bold
+hi rstEmphasis                            guifg=NONE    guibg=NONE    guisp=NONE    gui=italic      ctermfg=NONE ctermbg=238  cterm=NONE

@@ -29,19 +29,26 @@ set bs=2
 set foldmethod=syntax
 set foldlevel=1
 
-"" GUI options
-set guioptions-=T
-set guioptions-=r
-set guioptions-=L
-if has("gui_running")
-    set guifont=Droid\ Sans\ Mono\ 11
-endif
-
 
 """"""""""""""""""""""""""
 "" Pathogen Plugin Manager
 """"""""""""""""""""""""""
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+
+Plug 'itchyny/lightline.vim'
+Plug 'godlygeek/tabular'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-startify'
+Plug 'SirVer/ultisnips'
+Plug 'Raimondi/delimitMate'
+Plug 'scrooloose/nerdcommenter'
+Plug 'lilydjwg/colorizer'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+
+call plug#end()
 
 
 """"""""""""""""""""""
@@ -79,16 +86,9 @@ if v:version >= 700
 endif
 
 
-"""""""""""
-"" Encoding
-"""""""""""
-let g:NERDTreeDirArrows=0
-
-
 """"""""""""""
 "" MAPPINGS
 """"""""""""""
-nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :call ToggleShowWidth()<CR>
 nmap <F9> :call TableOfContents()<CR>
 nmap <F10> :call <SID>SynStack()<CR>
@@ -115,6 +115,7 @@ nmap <Leader>s :set spell!<CR>
 nmap <Leader>r :%s/\<<C-r><C-w>\>/
 nmap <Leader>m :w <bar> !make<CR>
 nmap <Leader>mc :w <bar> !make clean<CR>
+nmap <Leader>mt :w <bar> !make test<CR>
 
 vmap <Leader>t= :Tab/=<CR>
 nmap <Leader>t= :Tab/=<CR>

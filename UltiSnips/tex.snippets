@@ -14,6 +14,23 @@ endsnippet
 
 
 
+snippet block "beamer: standard block environment"
+\begin{block}{$1}
+	$0
+\end{block}
+endsnippet
+
+
+
+snippet fig "figure environment"
+\begin{figure}[${1:h}]
+	\centering
+	\includegraphics[width=${2:1.0}\textwidth]{$3}
+\end{figure}
+endsnippet
+
+
+
 snippet desc "description"
 \begin{description}
 	\item[$1] $0

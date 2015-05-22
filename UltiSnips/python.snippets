@@ -30,6 +30,32 @@ endsnippet
 
 
 
+snippet get "property getter"
+@property
+def ${1:member}(self):
+	"""Get the $1
+
+	Returns:
+		${2:type}: ${3:description}
+	"""
+	return self.$1
+endsnippet
+
+
+
+snippet set "property setter"
+@${1:member}.setter
+def $1(self, ${2:name}):
+	"""Set $1
+
+	Args:
+		$2 (${3:type}): new value of $1
+	"""
+	self.$1 = $2
+endsnippet
+
+
+
 snippet main "if __name__ == '__main__':"
 if __name__ == '__main__':
 	$0

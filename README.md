@@ -28,6 +28,7 @@ configuration to all the other installations.
 + NERDcommenter (https://github.com/scrooloose/nerdcommenter)
 + colorizer (https://github.com/lilydjwg/colorizer)
 + YouCompleteMe (https://github.com/Valloric/YouCompleteMe)
++ vim-unimpaired (https://github.com/tpope/vim-unimpaired)
 
 For the documentation of each plugin, refer to the plugins help or github page.
 

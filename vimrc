@@ -47,6 +47,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/nerdcommenter'
 Plug 'lilydjwg/colorizer'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'tpope/vim-unimpaired'
 
 call plug#end()
 

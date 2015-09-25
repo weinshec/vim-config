@@ -73,7 +73,6 @@ au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 au BufNewFile,BufRead *.conf set filetype=cfg
 
 au BufNewFile,BufRead *.py set foldmethod=indent
-au BufNewFile,BufRead *.py set foldlevel=0
 au BufNewFile,BufRead *.py set foldnestmax=2
 
 
@@ -173,7 +172,7 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:ycm_show_diagnostics_ui = 0
 

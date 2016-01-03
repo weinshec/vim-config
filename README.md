@@ -17,18 +17,18 @@ configuration to all the other installations.
 **The complete list of plugins:**
 + vim-plug (https://github.com/junegunn/vim-plug)
 + Lighline (https://github.com/itchyny/lightline.vim)
-+ tabular (https://github.com/godlygeek/tabular)
 + CtrlP (https://github.com/kien/ctrlp.vim)
-+ tagbar (https://github.com/majutsushi/tagbar)
-+ Syntastic (https://github.com/scrooloose/syntastic)
-+ vim-fugitive (https://github.com/tpope/vim-fugitive)
-+ vim-startify (https://github.com/mhinz/vim-startify)
-+ UltiSnips (https://github.com/SirVer/ultisnips)
-+ delimitMate (https://github.com/Raimondi/delimitMate)
-+ NERDcommenter (https://github.com/scrooloose/nerdcommenter)
++ tabular (https://github.com/godlygeek/tabular)
 + colorizer (https://github.com/lilydjwg/colorizer)
-+ YouCompleteMe (https://github.com/Valloric/YouCompleteMe)
-+ vim-unimpaired (https://github.com/tpope/vim-unimpaired)
++ vim-surround (https://github.com/tpope/vim-surround)
++ UltiSnips (https://github.com/SirVer/ultisnips)
++ NERDcommenter (https://github.com/scrooloose/nerdcommenter)
++ vim-clang (https://github.com/justmao945/vim-clang)
+
+*NeoVim only:*
++ neomake (https://github.com/benekastah/neomake.vim)
++ deoplete (https://github.com/Shougo/deoplete.nvim)
+
 
 For the documentation of each plugin, refer to the plugins help or github page.
 

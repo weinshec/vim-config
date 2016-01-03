@@ -1,0 +1,11 @@
+"" Additional Mappings
+vmap <Leader>t= :Tab/=<CR>
+nmap <Leader>t= :Tab/=<CR>
+vmap <Leader>t, :Tab/,\zs<CR>
+nmap <Leader>t, :Tab/,\zs<CR>
+vmap <Leader>t) :Tab/)<CR>
+nmap <Leader>t) :Tab/)<CR>
+vmap <Leader>t( :Tab/(/l0c1l0<CR>
+nmap <Leader>t( :Tab/(/l0c1l0<CR>
+vmap <Leader>t: :Tab/:\zs<CR>
+nmap <Leader>t: :Tab/:\zs<CR>

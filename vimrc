@@ -1,55 +1,51 @@
-"""""""""""""""
-"" General Sets
-"""""""""""""""
+""""""""""""""""
+"" General Setup
+""""""""""""""""
 
 autocmd! bufwritepost .vimrc source %
 
-set nocompatible
-set number
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set laststatus=2
-set nowrap
+"" Options on the neovim defaults list
 set autoindent
-set gdefault
-set wildmenu
-set history=700
-set undolevels=700
+set autoread
+set backspace=2
+set complete=.,w,b,u,t
+set display=lastline
+set encoding=utf-8
+set formatoptions=t,c,q,j
+set history=10000
 set hlsearch
 set incsearch
-set ignorecase
-set smartcase
-set nobackup
-set nowritebackup
-set noswapfile
-set pastetoggle=<F2>
+set langnoremap
+set laststatus=2
+set listchars=tab:>-,trail:-,nbsp:+
+set mouse=a
+set nocompatible
+set nrformats=hex
+set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winsize
+set smarttab
+set tabpagemax=50
+set tags="./tags;,tags"
+set ttyfast
+set wildmenu
+
+"" Additional Options
 set clipboard=unnamedplus
-set bs=2
-set foldmethod=syntax
+set expandtab
 set foldlevel=1
-
-
-""""""""""""""""""""""""""
-"" Pathogen Plugin Manager
-""""""""""""""""""""""""""
-call plug#begin('~/.vim/plugged')
-
-Plug 'itchyny/lightline.vim'
-Plug 'godlygeek/tabular'
-Plug 'kien/ctrlp.vim'
-Plug 'majutsushi/tagbar'
-Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-startify'
-Plug 'SirVer/ultisnips'
-Plug 'Raimondi/delimitMate'
-Plug 'scrooloose/nerdcommenter'
-Plug 'lilydjwg/colorizer'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-Plug 'tpope/vim-unimpaired'
-
-call plug#end()
+set foldmethod=syntax
+set gdefault
+set ignorecase
+set list
+set nobackup
+set noswapfile     
+set nowrap
+set nowritebackup
+set number  
+set pastetoggle=<F2>
+set shiftwidth=4
+set smartcase
+set tabstop=4
+set undolevels=10000
 
 
 """"""""""""""""""""""
@@ -69,12 +65,8 @@ colorscheme monokai
 """""""""""""""""""
 "" Type Definitions
 """""""""""""""""""
-au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 au BufNewFile,BufRead *.conf set filetype=cfg
-
 au BufNewFile,BufRead *.py set foldmethod=indent
-au BufNewFile,BufRead *.py set foldnestmax=2
-
 
 
 """"""""""""""""
@@ -86,28 +78,60 @@ if v:version >= 700
 endif
 
 
+"""""""""""""""""
+"" Plugin Manager
+"""""""""""""""""
+call plug#begin('~/.vim/plugged')
+
+Plug 'itchyny/lightline.vim'
+runtime custom/lightline.vim
+
+Plug 'kien/ctrlp.vim'
+runtime custom/ctrlp.vim
+
+Plug 'godlygeek/tabular'
+runtime custom/tabular.vim
+
+Plug 'lilydjwg/colorizer'
+
+Plug 'tpope/vim-surround'
+
+Plug 'SirVer/ultisnips'
+
+Plug 'scrooloose/nerdcommenter'
+
+Plug 'justmao945/vim-clang'
+runtime custom/vim-clang.vim
+
+if has('nvim')
+    Plug 'benekastah/neomake'
+    runtime custom/neomake.vim
+
+    Plug 'Shougo/deoplete.nvim'
+endif
+
+call plug#end()
+
+
 """"""""""""""
 "" MAPPINGS
 """"""""""""""
-nmap <F8> :call ToggleShowWidth()<CR>
-nmap <F9> :call TableOfContents()<CR>
-nmap <F10> :call <SID>SynStack()<CR>
 inoremap jk <Esc>
-noremap  <C-n> :nohl<CR>
-vnoremap <C-n> :nohl<CR>
-inoremap <C-n> :nohl<CR>
+map  <C-n> :nohl<CR>
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 map <s-h> :tabprevious<CR>
 map <s-l> :tabnext<CR>
-vnoremap < <gv  " better indentation
-vnoremap > >gv  " better indentation
-nnoremap ü <c-]>
-nnoremap Ü <c-O>
+vnoremap < <gv
+vnoremap > >gv
 nnoremap <space> za
 vnoremap <space> zf
+
+"" Call custom functions
+map  <F8> :call ToggleShowWidth()<CR>
+nmap <F12> :call <SID>SynStack()<CR>
 
 "" Leader key combinations
 let mapleader = ","
@@ -117,140 +141,10 @@ nmap <Leader>m :w <bar> !make<CR>
 nmap <Leader>mc :w <bar> !make clean<CR>
 nmap <Leader>mt :w <bar> !make test<CR>
 
-vmap <Leader>t= :Tab/=<CR>
-nmap <Leader>t= :Tab/=<CR>
-vmap <Leader>t, :Tab/,\zs<CR>
-nmap <Leader>t, :Tab/,\zs<CR>
-vmap <Leader>t) :Tab/)<CR>
-nmap <Leader>t) :Tab/)<CR>
-vmap <Leader>t( :Tab/(/l0c1l0<CR>
-nmap <Leader>t( :Tab/(/l0c1l0<CR>
-vmap <Leader>t: :Tab/:\zs<CR>
-nmap <Leader>t: :Tab/:\zs<CR>
-
-
 command! Q q
 command! Qa qall 
 command! W w 
 command! Wq wq
-
-
-""""""""""""
-"" Lightline
-""""""""""""
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"<RO>":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \ },
-      \ }
-
-
-""""""""""""""""
-"" YouCompleteMe
-""""""""""""""""
-let g:ycm_global_ycm_extra_conf = '/home/weinshec/.vim/YCM/.ycm_extra_conf.py'
-
-
-""""""""""""
-"" Syntastic
-""""""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:ycm_show_diagnostics_ui = 0
-
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-L/usr/lib/root -I/usr/include/root -ansi -Wall -Wno-long-long -pedantic -pedantic-errors -fPIC -pthread -std=c++11 -Wno-deprecated-declarations -m64 -I/usr/include/root'
-
-
-"""""""""
-"" Tagbar
-"""""""""
-let g:tagbar_autoclose = 1
-let g:tagbar_autofocus = 0
-let g:tagbar_sort      = 0
-let g:tagbar_type_python = {
-    \ 'kinds' : [
-        \ 'i:imports:1:0',
-        \ 'c:classes',
-        \ 'f:functions',
-        \ 'm:members',
-        \ 'v:variables:1:0',
-    \ ],
-\ }
-
-
-"""""""""""
-"" Startify
-"""""""""""
-" Highlight the acsii banner with green font
-hi StartifyHeader ctermfg=39
-" Don't change the directory when opening a recent file with a shortcut
-let g:startify_change_to_dir = 0
-" Set the contents of the banner
-let g:startify_custom_header = [
-            \ '                 ______                 ',
-            \ '              _-´ .   .`-_              ',
-            \ '          |/ /  .. . +   .\ \|          ',
-            \ '         |/ /            ..\ \|         ',
-            \ '       \|/ |: .   ._|_ .. . | \|/       ',
-            \ '        \/ |   _|_ .| . .:  | \/        ',
-            \ '       \ / |.   |  .  .    .| \ /       ',
-            \ '        \||| .  . .  _|_   .|||/        ',
-            \ '       \__| \  . :.  .|.  ./ |__/       ',
-            \ '         __| \_  .    .. _/ |__         ',
-            \ '          __|  `-______-´  |__          ',
-            \ '             -,____  ____,-             ',
-            \ '               ---´  `---               ',
-            \ '      UNITED FEDERATION OF PLANETS      ',
-            \ '                                        ',
-            \]
-" List recently used files using viminfo.
-let g:startify_show_files = 1
-" The number of files to list.
-let g:startify_show_files_number = 7
-" A list of files to bookmark. Always shown
-let g:startify_bookmarks = [ '~/.vimrc' ]
-
-
-""""""""
-"" CtrlP
-""""""""
-set runtimepath^=~/.vim/bundle/ctrlp
-set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(root|tar.gz|o|so|zip|pdf|eps|pyc)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
-" Make startify not open ctrlp in a new buffer
-let g:ctrlp_reuse_window = 'startify'
-
-
-""""""""""""
-"" UltiSnips
-""""""""""""
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:ultisnips_python_style="google"
 
 
 """"""""""""
@@ -275,27 +169,3 @@ function! <SID>SynStack()
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-" Merge a tab into a split in the previous window
-function! MergeTabs()
-  if tabpagenr() == 1
-    return
-  endif
-  let bufferName = bufname("%")
-  if tabpagenr("$") == tabpagenr()
-    close!
-  else
-    close!
-    tabprev
-  endif
-  vsplit
-  execute "buffer " . bufferName
-endfunction
-
-" Map Key to Tagbar or RST-TOC
-function! TableOfContents()
-    if &filetype == "rst"
-        execute "RivHelpSection"
-    else
-        execute "TagbarToggle"
-    endif
-endfunction

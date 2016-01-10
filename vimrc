@@ -37,13 +37,14 @@ set gdefault
 set ignorecase
 set list
 set nobackup
-set noswapfile     
+set noswapfile
 set nowrap
 set nowritebackup
-set number  
+set number
 set pastetoggle=<F2>
 set shiftwidth=4
 set smartcase
+set t_Co=256
 set tabstop=4
 set undolevels=10000
 
@@ -58,8 +59,7 @@ filetype plugin indent on
 """"""""""""""
 "" Colorscheme
 """"""""""""""
-set t_Co=256
-colorscheme monokai
+"colorscheme monokai
 
 
 """""""""""""""""""
@@ -82,35 +82,29 @@ endif
 "" Plugin Manager
 """""""""""""""""
 call plug#begin('~/.vim/plugged')
-
+Plug 'tomasr/molokai'
 Plug 'itchyny/lightline.vim'
-runtime custom/lightline.vim
-
 Plug 'kien/ctrlp.vim'
-runtime custom/ctrlp.vim
-
 Plug 'godlygeek/tabular'
-runtime custom/tabular.vim
-
 Plug 'lilydjwg/colorizer'
-
 Plug 'tpope/vim-surround'
-
 Plug 'SirVer/ultisnips'
-
 Plug 'scrooloose/nerdcommenter'
-
 Plug 'justmao945/vim-clang'
-runtime custom/vim-clang.vim
-
 if has('nvim')
     Plug 'benekastah/neomake'
-    runtime custom/neomake.vim
-
     Plug 'Shougo/deoplete.nvim'
 endif
-
 call plug#end()
+
+runtime custom/molokai.vim
+runtime custom/lightline.vim
+runtime custom/ctrlp.vim
+runtime custom/tabular.vim
+runtime custom/vim-clang.vim
+if has('nvim')
+    runtime custom/neomake.vim
+endif
 
 
 """"""""""""""

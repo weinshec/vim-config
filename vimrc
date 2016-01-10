@@ -104,6 +104,7 @@ runtime custom/tabular.vim
 runtime custom/vim-clang.vim
 if has('nvim')
     runtime custom/neomake.vim
+    runtime custom/deoplete.vim
 endif
 
 

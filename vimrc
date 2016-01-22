@@ -44,6 +44,8 @@ set number
 set pastetoggle=<F2>
 set shiftwidth=4
 set smartcase
+set splitbelow
+set splitright
 set t_Co=256
 set tabstop=4
 set undolevels=10000

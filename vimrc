@@ -42,6 +42,7 @@ set nowrap
 set nowritebackup
 set number
 set pastetoggle=<F2>
+set printoptions=paper:A4,syntax:y,wrap:y,left:5pc,number:y
 set shiftwidth=4
 set smartcase
 set splitbelow
@@ -78,6 +79,12 @@ if v:version >= 700
     setlocal spell spelllang=en_us
     set nospell
 endif
+
+
+""""""""""""
+"" LeaderKey
+""""""""""""
+let mapleader = ","
 
 
 """""""""""""""""
@@ -131,7 +138,6 @@ map  <F8> :call ToggleShowWidth()<CR>
 nmap <F12> :call <SID>SynStack()<CR>
 
 "" Leader key combinations
-let mapleader = ","
 nmap <Leader>s :set spell!<CR>
 nmap <Leader>r :%s/\<<C-r><C-w>\>/
 nmap <Leader>m :w <bar> !make<CR>

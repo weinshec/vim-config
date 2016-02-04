@@ -24,6 +24,7 @@ configuration to all the other installations.
 + UltiSnips (https://github.com/SirVer/ultisnips)
 + NERDcommenter (https://github.com/scrooloose/nerdcommenter)
 + vim-clang (https://github.com/justmao945/vim-clang)
++ vim-tagbar (https://github.com/majutsushi/tagbar)
 
 *NeoVim only:*
 + neomake (https://github.com/benekastah/neomake.vim)

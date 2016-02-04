@@ -100,6 +100,7 @@ Plug 'tpope/vim-surround'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdcommenter'
 Plug 'justmao945/vim-clang'
+Plug 'majutsushi/tagbar'
 if has('nvim')
     Plug 'benekastah/neomake'
     Plug 'Shougo/deoplete.nvim'
@@ -111,6 +112,7 @@ runtime custom/lightline.vim
 runtime custom/ctrlp.vim
 runtime custom/tabular.vim
 runtime custom/vim-clang.vim
+runtime custom/tagbar.vim
 if has('nvim')
     runtime custom/neomake.vim
     runtime custom/deoplete.vim

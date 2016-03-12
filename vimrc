@@ -134,6 +134,7 @@ vnoremap < <gv
 vnoremap > >gv
 nnoremap <space> za
 vnoremap <space> zf
+cmap w!! w !sudo tee > /dev/null %
 
 "" Call custom functions
 map  <F8> :call ToggleShowWidth()<CR>

@@ -147,6 +147,7 @@ nmap <Leader>r :%s/\<<C-r><C-w>\>/
 nmap <Leader>m :w <bar> !make<CR>
 nmap <Leader>mc :w <bar> !make clean<CR>
 nmap <Leader>mt :w <bar> !make test<CR>
+nmap <Leader>t :noautocmd vimgrep /TODO/j **/*.py **/*.cpp **/*.h <CR>:cw<CR>
 
 command! Q q
 command! Qa qall 

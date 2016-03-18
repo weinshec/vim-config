@@ -69,6 +69,7 @@ filetype plugin indent on
 """""""""""""""""""
 au BufNewFile,BufRead *.conf set filetype=cfg
 au BufNewFile,BufRead *.py set foldmethod=indent
+au FileType cpp setlocal shiftwidth=2 tabstop=2
 
 
 """"""""""""""""

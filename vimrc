@@ -58,12 +58,6 @@ syntax on
 filetype plugin indent on
 
 
-""""""""""""""
-"" Colorscheme
-""""""""""""""
-"colorscheme monokai
-
-
 """""""""""""""""""
 "" Type Definitions
 """""""""""""""""""
@@ -189,7 +183,7 @@ function! MyFoldText()
     " clear fold from fillchars to set it up the way we want later
     let &l:fillchars = substitute(&l:fillchars,',\?fold:.','','gi')
     let l:numwidth = (v:version < 701 ? 8 : &numberwidth)
-    let l:foldtext = '|'.(v:foldend-v:foldstart).' lines|'
+    let l:foldtext = '   |'.(v:foldend-v:foldstart).' lines|'
     let l:endofline = (&textwidth>0 ? &textwidth : 80)
     if &fdm=='diff'
       let l:linetext = strpart(' ---- unmodified content ----',0,l:endofline-strlen(l:foldtext))

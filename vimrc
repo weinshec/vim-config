@@ -64,6 +64,7 @@ filetype plugin indent on
 au BufNewFile,BufRead *.conf set filetype=cfg
 au BufNewFile,BufRead *.py set foldmethod=indent
 au FileType cpp setlocal shiftwidth=2 tabstop=2
+au FileType tex setlocal shiftwidth=2 tabstop=2
 
 
 """"""""""""""""
@@ -139,9 +140,6 @@ nmap <F12> :call <SID>SynStack()<CR>
 "" Leader key combinations
 nmap <Leader>s :set spell!<CR>
 nmap <Leader>r :%s/\<<C-r><C-w>\>/
-nmap <Leader>m :w <bar> !make<CR>
-nmap <Leader>mc :w <bar> !make clean<CR>
-nmap <Leader>mt :w <bar> !make test<CR>
 nmap <Leader>t :noautocmd vimgrep /TODO/j **/*.py **/*.cpp **/*.h <CR>:cw<CR>
 
 command! Q q

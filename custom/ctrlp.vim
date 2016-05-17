@@ -1,7 +1,7 @@
 set runtimepath^=~/.vim/plugged/ctrlp
 set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip,*.pdf
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'dir':  '\v[\/](.git|.hg|.svn|build|installed)$',
   \ 'file': '\v\.(root|tar.gz|o|so|zip|pdf|eps|pyc)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }

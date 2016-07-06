@@ -100,6 +100,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 if has('nvim')
     Plug 'benekastah/neomake'
     Plug 'Shougo/deoplete.nvim'
+    Plug 'zchee/deoplete-jedi'
 endif
 call plug#end()
 

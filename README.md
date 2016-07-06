@@ -29,6 +29,7 @@ configuration to all the other installations.
 *NeoVim only:*
 + neomake (https://github.com/benekastah/neomake.vim)
 + deoplete (https://github.com/Shougo/deoplete.nvim)
++ deoplete-jedi (https://github.com/zchee/deoplete-jedi)
 
 
 For the documentation of each plugin, refer to the plugins help or github page.

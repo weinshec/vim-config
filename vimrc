@@ -97,6 +97,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'justmao945/vim-clang'
 Plug 'majutsushi/tagbar'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'lervag/vimtex'
 if has('nvim')
     Plug 'benekastah/neomake'
     Plug 'Shougo/deoplete.nvim'
@@ -111,6 +112,7 @@ runtime custom/tabular.vim
 runtime custom/vim-clang.vim
 runtime custom/tagbar.vim
 runtime custom/vim-cpp-enhanced-highligh.vim
+runtime custom/vimtex.vim
 if has('nvim')
     runtime custom/neomake.vim
     runtime custom/deoplete.vim

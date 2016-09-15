@@ -23,10 +23,12 @@ endsnippet
 
 
 snippet fig "figure environment"
-\begin{figure}[${1:h}]
+\begin{figure}[${5:h}]
 	\centering
-	\includegraphics[width=${2:1.0}\textwidth]{$3}
-\end{figure}
+	\includegraphics[width=${2:1.0}\textwidth]{$1}
+	\caption{$3}
+	\label{fig:$4}
+\end{figure}$0
 endsnippet
 
 
@@ -69,32 +71,26 @@ endsnippet
 
 
 
-snippet bf "\textbf{*}"
+snippet bf "\textbf{*}" i
 \textbf{$1}$0
 endsnippet
 
 
 
-snippet it "\textit{*}"
+snippet it "\textit{*}" i
 \textit{$1}$0
 endsnippet
 
 
 
-snippet (it "(\textit{*}"
-(\textit{$1}$0
-endsnippet
-
-
-
-snippet sc "\textsc{*}"
+snippet sc "\textsc{*}" i
 \textsc{$1}$0
 endsnippet
 
 
 
-snippet (sc "(\textsc{*}"
-(\textsc{$1}$0
+snippet em "\emph{*}" i
+\emph{$1}$0
 endsnippet
 
 
@@ -154,23 +150,29 @@ endsnippet
 
 snippet sec "section"
 \section{${1:Section Title}}
+\label{sec:${2:label}}
+$0
 endsnippet
 
 
 
 snippet secs "section w/o numbering"
 \section*{${1:Section Title}}
+$0
 endsnippet
 
 
 
 snippet ssec "subsection"
 \subsection{${1:Subsection Title}}
+\label{ssec:${2:label}}
+$0
 endsnippet
 
 
 
 snippet ssecs "subsection w/o numbering"
 \subsection*{${1:Subsection Title}}
+$0
 endsnippet
 

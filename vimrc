@@ -42,12 +42,12 @@ set nowritebackup
 set number
 set pastetoggle=<F2>
 set printoptions=paper:A4,syntax:y,wrap:y,left:5pc,number:y
-set shiftwidth=4
+set shiftwidth=2
 set smartcase
 set splitbelow
 set splitright
 set t_Co=256
-set tabstop=4
+set tabstop=2
 set undolevels=10000
 
 
@@ -63,8 +63,7 @@ filetype plugin indent on
 """""""""""""""""""
 au BufNewFile,BufRead *.conf set filetype=cfg
 au BufNewFile,BufRead *.py set foldmethod=indent
-au FileType cpp setlocal shiftwidth=2 tabstop=2
-au FileType tex setlocal shiftwidth=2 tabstop=2
+au FileType py setlocal shiftwidth=4 tabstop=4
 
 
 """"""""""""""""
@@ -98,6 +97,7 @@ Plug 'justmao945/vim-clang'
 Plug 'majutsushi/tagbar'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'lervag/vimtex'
+Plug 'vim-scripts/django.vim'
 if has('nvim')
     Plug 'benekastah/neomake'
     Plug 'Shougo/deoplete.nvim'

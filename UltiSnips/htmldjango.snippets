@@ -1,0 +1,46 @@
+extends html
+
+
+snippet block "Generic block environment" i
+{% block ${1:identifier} %}$2
+{% endblock %}
+endsnippet
+
+
+snippet ext "extends tag" i
+{% extends "${1:template.html}" %}$0
+endsnippet
+
+
+snippet load "load tag" i
+{% load "${1:tagname}" %}$0
+endsnippet
+
+
+snippet url "url tag" i
+{% url '${1:lookup}' %}$0
+endsnippet
+
+
+snippet if "if clause tag" i
+{% if ${1:condition} %}
+	$0
+{% endif %}
+endsnippet
+
+
+snippet tag "generic tag" i
+{% ${1:tagname} %}
+endsnippet
+
+
+snippet var "generic variable" i
+{{ ${1:variable} }}$0
+endsnippet
+
+
+snippet for "for loop" i
+{% for ${1:item} in ${2:container} %}
+	$3
+{% endfor %}
+endsnippet

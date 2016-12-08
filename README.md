@@ -16,6 +16,7 @@ configuration to all the other installations.
 
 **The complete list of plugins:**
 + vim-plug (https://github.com/junegunn/vim-plug)
++ molokai (https://github.com/tomasr/molokai)
 + Lighline (https://github.com/itchyny/lightline.vim)
 + CtrlP (https://github.com/kien/ctrlp.vim)
 + tabular (https://github.com/godlygeek/tabular)
@@ -25,6 +26,10 @@ configuration to all the other installations.
 + NERDcommenter (https://github.com/scrooloose/nerdcommenter)
 + vim-clang (https://github.com/justmao945/vim-clang)
 + vim-tagbar (https://github.com/majutsushi/tagbar)
++ C++ highlight (https://guthub.com/octol/vim-cpp-enhanced-highlight)
++ vimtex (https://github.com/lervag/vimtex)
++ django.vim (https://github.com/vim-scripts/django.vim)
++ fugitive (https://github.com/tpope/vim-fugitive)
 
 *NeoVim only:*
 + neomake (https://github.com/benekastah/neomake.vim)

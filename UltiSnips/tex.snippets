@@ -26,8 +26,33 @@ snippet fig "figure environment"
 \begin{figure}[${5:h}]
 	\centering
 	\includegraphics[width=${2:1.0}\textwidth]{$1}
-	\caption{$3}
-	\label{fig:$4}
+	\caption{%
+		$3
+	}\label{fig:$4}
+\end{figure}$0
+endsnippet
+
+
+
+snippet subfig "subfigure environment"
+\begin{figure}[h]
+  \centering
+  \subcaptionbox{%
+		${5:insert caption here}
+  }{%
+    \centering
+    \includegraphics[width=${2:0.45}\textwidth]{$1}
+  }
+  \hfill
+  \subcaptionbox{%
+		${6:insert caption here}
+  }{%
+    \centering
+    \includegraphics[width=${4:0.45}\textwidth]{$3}
+  }
+  \caption{%
+		${7:insert caption here}
+  }\label{fig:${8:label}}
 \end{figure}$0
 endsnippet
 

@@ -99,6 +99,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'lervag/vimtex'
 Plug 'vim-scripts/django.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
 if has('nvim')
     Plug 'benekastah/neomake'
     Plug 'Shougo/deoplete.nvim'
@@ -145,6 +146,10 @@ nmap <F12> :call <SID>SynStack()<CR>
 nmap <Leader>s :set spell!<CR>
 nmap <Leader>r :%s/\<<C-r><C-w>\>/
 nmap <Leader>t :noautocmd vimgrep /TODO/j **/*.py **/*.cpp **/*.h <CR>:cw<CR>
+nmap <Leader>f0 :set nofoldenable<CR>
+nmap <Leader>f1 :set foldenable foldlevel=1<CR>
+nmap <Leader>f2 :set foldenable foldlevel=2<CR>
+nmap <Leader>f3 :set foldenable foldlevel=3<CR>
 
 command! Q q
 command! Qa qall 

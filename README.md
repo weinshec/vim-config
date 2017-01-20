@@ -30,6 +30,7 @@ configuration to all the other installations.
 + vimtex (https://github.com/lervag/vimtex)
 + django.vim (https://github.com/vim-scripts/django.vim)
 + fugitive (https://github.com/tpope/vim-fugitive)
++ auto-pairs (https://github.com/jiangmiao/auto-pairs)
 
 *NeoVim only:*
 + neomake (https://github.com/benekastah/neomake.vim)

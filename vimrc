@@ -62,6 +62,7 @@ filetype plugin indent on
 "" Type Definitions
 """""""""""""""""""
 au BufNewFile,BufRead *.conf set filetype=cfg
+au BufNewFile,BufRead *.tex set filetype=tex
 au BufNewFile,BufRead *.py set foldmethod=indent
 au FileType py setlocal shiftwidth=4 tabstop=4
 

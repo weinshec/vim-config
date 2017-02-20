@@ -23,7 +23,7 @@ endsnippet
 
 
 snippet fig "figure environment"
-\begin{figure}[${5:h}]
+\begin{figure}[${5:ht}]
 	\centering
 	\includegraphics[width=${2:1.0}\textwidth]{$1}
 	\caption{%
@@ -35,7 +35,7 @@ endsnippet
 
 
 snippet subfig "subfigure environment"
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \subcaptionbox{%
 		${5:insert caption here}
@@ -205,4 +205,12 @@ endsnippet
 
 snippet foot "footnote" i
 \footnote{${1:footnote_text}}$0
+endsnippet
+
+
+
+snippet line "sectioning line"
+% _____________________________________________________________________________
+% ${1:Title}`!p snip.rv = (77-2*len(t[1]))*' '+t[1].upper()`
+$0
 endsnippet

@@ -211,7 +211,6 @@ endglobal
 
 snippet class "class with docstrings" b
 class ${1:MyClass}(${2:object}):
-
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
 
 	def __init__(self$4):
@@ -655,6 +654,12 @@ snippet doc "doc block (triple quotes)"
 `!p snip.rv = triple_quotes(snip)`
 ${1:doc}
 `!p snip.rv = triple_quotes(snip)`
+endsnippet
+
+snippet line "doc line for sectioning"
+# _____________________________________________________________________________
+# ${1:Title}`!p snip.rv = (77-2*len(t[1]))*' '+t[1].upper()`
+$0
 endsnippet
 
 # vim:ft=snippets:

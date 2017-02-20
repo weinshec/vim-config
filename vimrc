@@ -111,6 +111,7 @@ runtime custom/molokai.vim
 runtime custom/lightline.vim
 runtime custom/ctrlp.vim
 runtime custom/tabular.vim
+runtime custom/ultisnips.vim
 runtime custom/vim-clang.vim
 runtime custom/tagbar.vim
 runtime custom/vim-cpp-enhanced-highligh.vim

@@ -124,6 +124,15 @@ endif
 
 
 """"""""""""""
+"" COLORSCHEME
+""""""""""""""
+set background=dark
+
+"colorscheme molokai
+colorscheme solarized
+
+
+""""""""""""""
 "" MAPPINGS
 """"""""""""""
 inoremap jk <Esc>

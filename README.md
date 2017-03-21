@@ -31,6 +31,7 @@ configuration to all the other installations.
 + django.vim (https://github.com/vim-scripts/django.vim)
 + fugitive (https://github.com/tpope/vim-fugitive)
 + auto-pairs (https://github.com/jiangmiao/auto-pairs)
++ vim-dictcc (https://github.com/weinshec/vim-dictcc)
 
 *NeoVim only:*
 + neomake (https://github.com/benekastah/neomake.vim)

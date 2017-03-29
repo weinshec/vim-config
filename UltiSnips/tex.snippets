@@ -58,6 +58,24 @@ endsnippet
 
 
 
+snippet tab "table environment"
+\begin{table}[ht]
+  \centering
+  \caption{%
+    ${1:table caption}
+  }\label{tab:${2:label}}
+  \begin{tabular}{$3}
+    \toprule
+		$4 \\
+    \midrule
+		$5 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+endsnippet
+
+
+
 snippet desc "description"
 \begin{description}
 	\item[$1] $0

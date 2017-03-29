@@ -29,6 +29,7 @@ set wildmenu
 
 "" Additional Options
 set clipboard=unnamedplus
+set completeopt+=noinsert
 set expandtab
 set foldlevel=1
 set foldmethod=syntax

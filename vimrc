@@ -120,6 +120,7 @@ runtime custom/tagbar.vim
 runtime custom/vim-cpp-enhanced-highligh.vim
 runtime custom/vimtex.vim
 runtime custom/vim-dictcc.vim
+runtime custom/fugitive.vim
 if has('nvim')
     runtime custom/neomake.vim
     runtime custom/deoplete.vim

@@ -103,6 +103,8 @@ Plug 'vim-scripts/django.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'weinshec/vim-dictcc'
+Plug 'Rykka/riv.vim'
+Plug 'tpope/vim-unimpaired'
 if has('nvim')
     Plug 'benekastah/neomake'
     Plug 'Shougo/deoplete.nvim'
@@ -125,6 +127,9 @@ if has('nvim')
     runtime custom/neomake.vim
     runtime custom/deoplete.vim
 endif
+let rstnotes = { 'name': 'RST Notes', 'path': '~/.rstnotes',}
+let g:riv_projects = [rstnotes]
+
 
 
 """"""""""""""

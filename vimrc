@@ -77,6 +77,15 @@ if v:version >= 700
 endif
 
 
+"""""""""""
+"" DiffMode
+"""""""""""
+if &diff
+    " ignore whitespaces
+    set diffopt+=iwhite
+endif
+
+
 """"""""""""
 "" LeaderKey
 """"""""""""

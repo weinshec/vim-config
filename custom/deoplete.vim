@@ -1,21 +1,21 @@
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_refresh_always = 1
-let g:deoplete#omni_patterns = {}
-let g:deoplete#omni_patterns.cpp = '[^. *\t]\.\w*|[^. *\t]\::\w*|[^. *\t]\->\w*|#include\s*[<"][^>"]*'
-let g:deoplete#omni#input_patterns={}
-let g:deoplete#omni#input_patterns.cpp = ['[^. *\t]\.\w*','[^. *\t]\::\w*','[^. *\t]\->\w*','#include\s*[<"][^>"]*']
-let g:deoplete#omni#input_patterns.tex = '\\(?:'
-        \ .  '\w*cite\w*(?:\s*\[[^]]*\]){0,2}\s*{[^}]*'
-        \ . '|\w*ref(?:\s*\{[^}]*|range\s*\{[^,}]*(?:}{)?)'
-        \ . '|hyperref\s*\[[^]]*'
-        \ . '|includegraphics\*?(?:\s*\[[^]]*\]){0,2}\s*\{[^}]*'
-        \ . '|(?:include(?:only)?|input)\s*\{[^}]*'
-        \ . '|\w*(gls|Gls|GLS)(pl)?\w*(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
-        \ . '|includepdf(\s*\[[^]]*\])?\s*\{[^}]*'
-        \ . '|includestandalone(\s*\[[^]]*\])?\s*\{[^}]*'
-        \ .')'
+let g:deoplete#disable_auto_complete = 1
 
-inoremap <expr><tab>  pumvisible() ? "\<C-n>" : "\<tab>"
-inoremap <expr><S-tab> pumvisible() ? "\<C-p>" : "\<bs>"
+" <TAB>: completion.
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>"
+      \ : <SID>is_whitespace() ? "\<TAB>"
+      \ : deoplete#manual_complete()
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<C-h>"
 
+" Checks if previous character was a whitespace
+function! s:is_whitespace() abort "{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><BS> pumvisible() ? deoplete#smart_close_popup() : "\<BS>"
+
+" Close doc split when leaving insert mode
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif

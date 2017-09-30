@@ -24,14 +24,13 @@ configuration to all the other installations.
 + vim-surround (https://github.com/tpope/vim-surround)
 + UltiSnips (https://github.com/SirVer/ultisnips)
 + NERDcommenter (https://github.com/scrooloose/nerdcommenter)
-+ vim-clang (https://github.com/justmao945/vim-clang)
-+ vim-tagbar (https://github.com/majutsushi/tagbar)
 + C++ highlight (https://guthub.com/octol/vim-cpp-enhanced-highlight)
-+ vimtex (https://github.com/lervag/vimtex)
-+ django.vim (https://github.com/vim-scripts/django.vim)
 + fugitive (https://github.com/tpope/vim-fugitive)
 + auto-pairs (https://github.com/jiangmiao/auto-pairs)
 + vim-dictcc (https://github.com/weinshec/vim-dictcc)
++ RIV (https://github.com/Rykka/riv)
++ vim-unimpaired (https://github.com/tpope/vim-unimpaired)
++ clang_complete (https://github.com/Rip-Rip/clang_complete)
 
 *NeoVim only:*
 + neomake (https://github.com/benekastah/neomake.vim)

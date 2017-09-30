@@ -104,16 +104,13 @@ Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-surround'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdcommenter'
-Plug 'justmao945/vim-clang'
-Plug 'majutsushi/tagbar'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'lervag/vimtex'
-Plug 'vim-scripts/django.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'weinshec/vim-dictcc'
 Plug 'Rykka/riv.vim'
 Plug 'tpope/vim-unimpaired'
+Plug 'Rip-Rip/clang_complete', { 'do': 'make install' }
 if has('nvim')
     Plug 'benekastah/neomake'
     Plug 'Shougo/deoplete.nvim'
@@ -126,19 +123,16 @@ runtime custom/lightline.vim
 runtime custom/ctrlp.vim
 runtime custom/tabular.vim
 runtime custom/ultisnips.vim
-runtime custom/vim-clang.vim
-runtime custom/tagbar.vim
-runtime custom/vim-cpp-enhanced-highligh.vim
-runtime custom/vimtex.vim
-runtime custom/vim-dictcc.vim
+runtime custom/vim-cpp-enhanced-highlight.vim
 runtime custom/fugitive.vim
+runtime custom/auto-pairs.vim
+runtime custom/vim-dictcc.vim
+runtime custom/riv.vim
+runtime custom/clang_complete.vim
 if has('nvim')
     runtime custom/neomake.vim
     runtime custom/deoplete.vim
 endif
-let rstnotes = { 'name': 'RST Notes', 'path': '~/.rstnotes',}
-let g:riv_projects = [rstnotes]
-
 
 
 """"""""""""""

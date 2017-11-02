@@ -139,9 +139,7 @@ endif
 "" COLORSCHEME
 """"""""""""""
 set background=dark
-
-"colorscheme molokai
-colorscheme solarized
+colorscheme molokai
 
 
 """"""""""""""

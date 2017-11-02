@@ -15,7 +15,11 @@ function! s:is_whitespace() abort "{{{
 endfunction"}}}
 
 " <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><BS> pumvisible() ? deoplete#smart_close_popup() : "\<BS>"
+if exists('g:AutoPairsMapBS')
+  inoremap <expr><BS> pumvisible() ? deoplete#smart_close_popup() : AutoPairsDelete()
+else
+  inoremap <expr><BS> pumvisible() ? deoplete#smart_close_popup() : "\<BS>"
+endif
 
 " Close doc split when leaving insert mode
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif

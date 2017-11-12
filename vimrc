@@ -96,7 +96,7 @@ let mapleader = ","
 "" Plugin Manager
 """""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'tomasr/molokai'
+Plug 'rakr/vim-one'
 Plug 'itchyny/lightline.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
@@ -118,7 +118,6 @@ if has('nvim')
 endif
 call plug#end()
 
-runtime custom/molokai.vim
 runtime custom/lightline.vim
 runtime custom/ctrlp.vim
 runtime custom/tabular.vim
@@ -139,8 +138,19 @@ endif
 "" COLORSCHEME
 """"""""""""""
 set background=dark
-colorscheme molokai
+colorscheme one
 
+" activate true color support
+if (empty($TMUX))
+  if (has("nvim"))
+    " old NEOVIM
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    " new NEOVIM and VIM>7.4.1770
+    set termguicolors
+  endif
+endif
 
 """"""""""""""
 "" MAPPINGS

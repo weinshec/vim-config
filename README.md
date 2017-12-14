@@ -26,6 +26,8 @@ configuration to all the other installations.
 + fugitive (https://github.com/tpope/vim-fugitive)
 + vim-dictcc (https://github.com/weinshec/vim-dictcc)
 + vim-unimpaired (https://github.com/tpope/vim-unimpaired)
++ lion.vim (https://github.com/tommcdo/vim-lion)
++ commentary.vim (https://github.com/tpope/vim-commentary)
 
 *NeoVim only:*
 + neomake (https://github.com/benekastah/neomake.vim)

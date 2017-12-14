@@ -100,6 +100,8 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tpope/vim-fugitive'
 Plug 'weinshec/vim-dictcc'
 Plug 'tpope/vim-unimpaired'
+Plug 'tommcdo/vim-lion'
+Plug 'tpope/vim-commentary'
 if has('nvim')
     Plug 'benekastah/neomake'
     Plug 'Shougo/deoplete.nvim'

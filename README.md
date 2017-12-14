@@ -16,21 +16,16 @@ configuration to all the other installations.
 
 **The complete list of plugins:**
 + vim-plug (https://github.com/junegunn/vim-plug)
-+ molokai (https://github.com/tomasr/molokai)
++ vim-one (https://github.com/rakr/vim-one)
 + Lighline (https://github.com/itchyny/lightline.vim)
 + CtrlP (https://github.com/kien/ctrlp.vim)
-+ tabular (https://github.com/godlygeek/tabular)
 + colorizer (https://github.com/lilydjwg/colorizer)
 + vim-surround (https://github.com/tpope/vim-surround)
 + UltiSnips (https://github.com/SirVer/ultisnips)
-+ NERDcommenter (https://github.com/scrooloose/nerdcommenter)
-+ C++ highlight (https://guthub.com/octol/vim-cpp-enhanced-highlight)
++ C++ highlighting (https://guthub.com/octol/vim-cpp-enhanced-highlight)
 + fugitive (https://github.com/tpope/vim-fugitive)
-+ auto-pairs (https://github.com/jiangmiao/auto-pairs)
 + vim-dictcc (https://github.com/weinshec/vim-dictcc)
-+ RIV (https://github.com/Rykka/riv)
 + vim-unimpaired (https://github.com/tpope/vim-unimpaired)
-+ clang_complete (https://github.com/Rip-Rip/clang_complete)
 
 *NeoVim only:*
 + neomake (https://github.com/benekastah/neomake.vim)

@@ -1,7 +1,6 @@
-autocmd! BufWritePost * Neomake
+" call NeoMake automatically on read and write
+call neomake#configure#automake('w')
 
-"let g:neomake_cpp_enable_markers=['clang']
-"let g:neomake_cpp_clang_args = ["-std=c++11", "-Wextra", "-Wall", "-g"]
-
-nmap <Leader>m  :w<CR>:Neomake!<CR>
-nmap <Leader>mc :w<CR>:NeomakeSh make clean<CR>
+" shortcut mappings
+nmap <Leader>m  <CR>:NeomakeSh make<CR>
+nmap <Leader>mc <CR>:NeomakeSh make clean<CR>

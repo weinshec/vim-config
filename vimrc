@@ -4,53 +4,46 @@
 
 autocmd! bufwritepost .vimrc source %
 
-"" Options on the neovim defaults list
 set autoindent
 set autoread
 set backspace=2
-set complete=.,w,b,u,t
+set clipboard=unnamedplus
+set completeopt+=menuone
+set completeopt+=noinsert
 set display=lastline
 set encoding=utf-8
-set formatoptions=t,c,q,j
-set history=10000
-set hlsearch
+set expandtab
+set foldmethod=syntax
+set formatoptions=tcqjn
+set gdefault
+set history=1000
+set ignorecase
 set incsearch
 set laststatus=2
-set listchars=tab:>-,trail:-,nbsp:+
-set mouse=a
-set nocompatible
-set nrformats=hex
-set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winsize
-set smarttab
-set tabpagemax=50
-set tags="./tags;,tags"
-set ttyfast
-set wildmenu
-
-"" Additional Options
-set clipboard=unnamedplus
-set completeopt+=noinsert
-set completeopt+=menuone
-set expandtab
-set foldlevel=1
-set foldmethod=syntax
-set gdefault
-set ignorecase
 set list
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 set nobackup
+set nocompatible
 set noswapfile
 set nowrap
 set nowritebackup
 set number
 set pastetoggle=<F2>
 set printoptions=paper:A4,syntax:y,wrap:y,left:5pc,number:y
+set scrolloff=1
+set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winsize
 set shiftwidth=2
+set sidescroll=1
+set sidescrolloff=1
 set smartcase
+set smarttab
 set splitbelow
 set splitright
 set t_Co=256
+set tabpagemax=50
 set tabstop=2
-set undolevels=10000
+set wildmenu
+set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip,*.pdf
 
 
 """"""""""""""""""""""
@@ -100,18 +93,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'rakr/vim-one'
 Plug 'itchyny/lightline.vim'
 Plug 'kien/ctrlp.vim'
-Plug 'godlygeek/tabular'
 Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-surround'
 Plug 'SirVer/ultisnips'
-Plug 'scrooloose/nerdcommenter'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tpope/vim-fugitive'
-Plug 'jiangmiao/auto-pairs'
 Plug 'weinshec/vim-dictcc'
-Plug 'Rykka/riv.vim'
 Plug 'tpope/vim-unimpaired'
-Plug 'Rip-Rip/clang_complete', { 'do': 'make install' }
 if has('nvim')
     Plug 'benekastah/neomake'
     Plug 'Shougo/deoplete.nvim'
@@ -121,14 +109,10 @@ call plug#end()
 
 runtime custom/lightline.vim
 runtime custom/ctrlp.vim
-runtime custom/tabular.vim
 runtime custom/ultisnips.vim
 runtime custom/vim-cpp-enhanced-highlight.vim
 runtime custom/fugitive.vim
-runtime custom/auto-pairs.vim
 runtime custom/vim-dictcc.vim
-runtime custom/riv.vim
-runtime custom/clang_complete.vim
 if has('nvim')
     runtime custom/neomake.vim
     runtime custom/deoplete.vim
@@ -151,11 +135,12 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+
 """"""""""""""
 "" MAPPINGS
 """"""""""""""
 inoremap jk <Esc>
-map  <C-n> :nohl<CR>
+nmap  <C-n> :nohl<CR>
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
@@ -170,12 +155,11 @@ cmap w!! w !sudo tee > /dev/null %
 
 "" Call custom functions
 map  <F8> :call ToggleShowWidth()<CR>
-nmap <F12> :call <SID>SynStack()<CR>
 
 "" Leader key combinations
 nmap <Leader>s :set spell!<CR>
 nmap <Leader>r :%s/\<<C-r><C-w>\>/
-nmap <Leader>t :noautocmd vimgrep /TODO/j **/*.py **/*.cpp **/*.h <CR>:cw<CR>
+nmap <Leader>t :noautocmd vimgrep /TODO/j **/* <CR>:cw<CR>
 nmap <Leader>f0 :set nofoldenable<CR>
 nmap <Leader>f1 :set foldenable foldlevel=1<CR>
 nmap <Leader>f2 :set foldenable foldlevel=2<CR>
@@ -199,14 +183,6 @@ function! ToggleShowWidth()
         let &cc = 80
         let &textwidth = 79
     endif
-endfunc
-
-" Show type of object under curser
-function! <SID>SynStack()
-    if !exists("*synstack")
-        return
-    endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
 " Customize my fold text, behaviour and color

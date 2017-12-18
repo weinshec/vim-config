@@ -45,6 +45,11 @@ set tabstop=2
 set wildmenu
 set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip,*.pdf
 
+" neovim specifics
+if has('nvim')
+  set inccommand=nosplit
+endif
+
 
 """"""""""""""""""""""
 "" Syntax highlighting
@@ -154,6 +159,11 @@ vnoremap > >gv
 nnoremap <space> za
 vnoremap <space> zf
 cmap w!! w !sudo tee > /dev/null %
+
+" neovim specifics
+if has('nvim')
+  tnoremap jk <C-\><C-n>
+endif
 
 "" Call custom functions
 map  <F8> :call ToggleShowWidth()<CR>

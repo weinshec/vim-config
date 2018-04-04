@@ -1,0 +1,8 @@
+global !p
+def insert_whitespace(account, amount):
+	return " "*(44 - len(account) - len(amount))
+endglobal
+
+snippet sp "transaction split"
+${1:__account__} `!p snip.rv=insert_whitespace(t[1], t[2])` € ${2:0.00}
+endsnippet

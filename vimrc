@@ -16,6 +16,7 @@ set expandtab
 set foldmethod=syntax
 set formatoptions=tcqjn
 set gdefault
+set hidden
 set history=1000
 set ignorecase
 set incsearch

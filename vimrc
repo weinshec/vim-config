@@ -110,6 +110,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
 Plug 'ledger/vim-ledger'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
 call plug#end()
 
 runtime custom/lightline.vim
@@ -118,6 +120,7 @@ runtime custom/ultisnips.vim
 runtime custom/vim-cpp-enhanced-highlight.vim
 runtime custom/fugitive.vim
 runtime custom/vim-dictcc.vim
+runtime custom/lsp_clang.vim
 
 
 """"""""""""""

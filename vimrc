@@ -170,6 +170,8 @@ nmap <Leader>f0 :set nofoldenable<CR>
 nmap <Leader>f1 :set foldenable foldlevel=1<CR>
 nmap <Leader>f2 :set foldenable foldlevel=2<CR>
 nmap <Leader>f3 :set foldenable foldlevel=3<CR>
+nmap <Leader>b :ls<CR>:b<space>
+nmap <Leader>bd :ls<CR>:bd<space>
 
 command! Q q
 command! Qa qall 

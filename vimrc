@@ -110,11 +110,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
 Plug 'ledger/vim-ledger'
-if has('nvim')
-    Plug 'benekastah/neomake'
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'zchee/deoplete-jedi'
-endif
 call plug#end()
 
 runtime custom/lightline.vim
@@ -123,10 +118,6 @@ runtime custom/ultisnips.vim
 runtime custom/vim-cpp-enhanced-highlight.vim
 runtime custom/fugitive.vim
 runtime custom/vim-dictcc.vim
-if has('nvim')
-    runtime custom/neomake.vim
-    runtime custom/deoplete.vim
-endif
 
 
 """"""""""""""

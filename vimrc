@@ -22,7 +22,7 @@ set ignorecase
 set incsearch
 set laststatus=2
 set list
-set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+set listchars=tab:>\ ,trail:‧,extends:>,precedes:<,nbsp:+
 set nobackup
 set nocompatible
 set noswapfile
@@ -97,21 +97,19 @@ let mapleader = ","
 "" Plugin Manager
 """""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'rakr/vim-one'
+Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-surround'
 Plug 'SirVer/ultisnips'
-Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tpope/vim-fugitive'
-Plug 'weinshec/vim-dictcc'
 Plug 'tpope/vim-unimpaired'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
-Plug 'ledger/vim-ledger'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 runtime custom/lightline.vim
@@ -121,22 +119,25 @@ runtime custom/vim-cpp-enhanced-highlight.vim
 runtime custom/fugitive.vim
 runtime custom/vim-dictcc.vim
 runtime custom/lsp_clang.vim
+runtime custom/lsp_pyls.vim
 
 
 """"""""""""""
 "" COLORSCHEME
 """"""""""""""
-set background=dark
-colorscheme one
+" set background=dark
+colorscheme onedark
 
 " activate true color support
-if (has("nvim"))
-  " old NEOVIM
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
-if (has("termguicolors"))
-  " new NEOVIM and VIM>7.4.1770
-  set termguicolors
+if (empty($TMUX))
+  if (has("nvim"))
+    " old NEOVIM
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    " new NEOVIM and VIM>7.4.1770
+    set termguicolors
+  endif
 endif
 
 

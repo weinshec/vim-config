@@ -13,6 +13,7 @@ set completeopt+=noinsert
 set display=lastline
 set encoding=utf-8
 set expandtab
+set foldlevel=99
 set foldmethod=syntax
 set formatoptions=tcqjn
 set gdefault
@@ -44,7 +45,8 @@ set t_Co=256
 set tabpagemax=50
 set tabstop=2
 set wildmenu
-set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip,*.pdf
+set wildmode=list:longest,full
+set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip,*.pdf,*.d,*.cmdline,*.bake
 
 " neovim specifics
 if has('nvim')
@@ -66,7 +68,7 @@ au BufNewFile,BufRead *.conf set filetype=cfg
 au BufNewFile,BufRead *.tex set filetype=tex
 au BufNewFile,BufRead *.py set foldmethod=indent
 au FileType py setlocal shiftwidth=4 tabstop=4
-au FileType ledger setlocal shiftwidth=4 tabstop=4
+au FileType cpp setlocal shiftwidth=4 tabstop=4 formatexpr= formatprg=clang-format\ -style=file
 
 
 """"""""""""""""
@@ -77,19 +79,9 @@ if v:version >= 700
     set nospell
 endif
 
-
-"""""""""""
-"" DiffMode
-"""""""""""
-if &diff
-    " ignore whitespaces
-    set diffopt+=iwhite
-endif
-
-
-""""""""""""
-"" LeaderKey
-""""""""""""
+""""""""""""""""""""
+"" Leader Definition
+""""""""""""""""""""
 let mapleader = ","
 
 
@@ -97,36 +89,36 @@ let mapleader = ","
 "" Plugin Manager
 """""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'joshdick/onedark.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
-Plug 'kien/ctrlp.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-surround'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
-Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'sheerun/vim-polyglot'
+if isdirectory(expand("~/.fzf"))
+  Plug '~/.fzf'
+  Plug 'junegunn/fzf.vim'
+endif
+if (has("nvim"))
+  Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+endif
 call plug#end()
 
-runtime custom/lightline.vim
-runtime custom/ctrlp.vim
-runtime custom/ultisnips.vim
-runtime custom/vim-cpp-enhanced-highlight.vim
 runtime custom/fugitive.vim
-runtime custom/vim-dictcc.vim
-runtime custom/lsp_clang.vim
-runtime custom/lsp_pyls.vim
+runtime custom/fzf.vim
+runtime custom/lightline.vim
+runtime custom/lsp.vim
+runtime custom/ultisnips.vim
 
 
 """"""""""""""
 "" COLORSCHEME
 """"""""""""""
 " set background=dark
-colorscheme onedark
+colorscheme base16-oceanicnext
 
 " activate true color support
 if (empty($TMUX))
@@ -141,41 +133,49 @@ if (empty($TMUX))
 endif
 
 
+"""""""""""""""""
+"" NETRW SETTINGS
+"""""""""""""""""
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+
+
 """"""""""""""
 "" MAPPINGS
 """"""""""""""
+" remap escape key
 inoremap jk <Esc>
-nmap  <C-n> :nohl<CR>
+if has('nvim')
+  tnoremap jk <C-\><C-n>
+endif
+
+" navigation / views
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 map <s-h> :tabprevious<CR>
 map <s-l> :tabnext<CR>
-vnoremap < <gv
-vnoremap > >gv
+nnoremap <c-n> :nohl<CR>
+nnoremap <c-q> :pclose<CR>
 nnoremap <space> za
 vnoremap <space> zf
-cmap w!! w !sudo tee > /dev/null %
 
-" neovim specifics
-if has('nvim')
-  tnoremap jk <C-\><C-n>
-endif
+" text manipulation
+vnoremap < <gv
+vnoremap > >gv
 
-"" Call custom functions
-map  <F8> :call ToggleShowWidth()<CR>
+" custom functions
+map <F8> :call ToggleShowWidth()<CR>
 
-"" Leader key combinations
+" Leader key combinations
 nmap <Leader>s :set spell!<CR>
 nmap <Leader>r :%s/\<<C-r><C-w>\>/
-nmap <Leader>t :noautocmd vimgrep /TODO/j **/* <CR>:cw<CR>
-nmap <Leader>f0 :set nofoldenable<CR>
+nmap <Leader>nf :set nofoldenable<CR>
+nmap <Leader>f0 :set foldenable foldlevel=0<CR>
 nmap <Leader>f1 :set foldenable foldlevel=1<CR>
 nmap <Leader>f2 :set foldenable foldlevel=2<CR>
 nmap <Leader>f3 :set foldenable foldlevel=3<CR>
-nmap <Leader>b :ls<CR>:b<space>
-nmap <Leader>bd :ls<CR>:bd<space>
 
 command! Q q
 command! Qa qall 
@@ -186,14 +186,14 @@ command! Wq wq
 """"""""""""
 "" VimScript
 """"""""""""
-" Toggle display of 80th column
+" Toggle display of 120th column
 function! ToggleShowWidth()
     if &cc > 0
         let &cc = 0
         let &textwidth = 0
     else
-        let &cc = 80
-        let &textwidth = 79
+        let &cc = 120
+        let &textwidth = 119
     endif
 endfunc
 

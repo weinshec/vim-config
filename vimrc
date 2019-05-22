@@ -10,6 +10,7 @@ set backspace=2
 set clipboard=unnamedplus
 set completeopt+=menuone
 set completeopt+=noinsert
+set cursorline
 set display=lastline
 set encoding=utf-8
 set expandtab
@@ -32,6 +33,7 @@ set nowritebackup
 set number
 set pastetoggle=<F2>
 set printoptions=paper:A4,syntax:y,wrap:y,left:5pc,number:y
+set relativenumber
 set scrolloff=1
 set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winsize
 set shiftwidth=2
@@ -79,6 +81,15 @@ if v:version >= 700
     set nospell
 endif
 
+
+""""""""""""""""
+"" Spellchecking
+""""""""""""""""
+if &diff
+  set norelativenumber
+endif
+
+
 """"""""""""""""""""
 "" Leader Definition
 """"""""""""""""""""
@@ -89,7 +100,6 @@ let mapleader = ","
 "" Plugin Manager
 """""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'chriskempson/base16-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
 Plug 'lilydjwg/colorizer'
@@ -98,6 +108,10 @@ Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/rfc-syntax'
+Plug 'cocopon/iceberg.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
 if isdirectory(expand("~/.fzf"))
   Plug '~/.fzf'
   Plug 'junegunn/fzf.vim'
@@ -118,7 +132,8 @@ runtime custom/ultisnips.vim
 "" COLORSCHEME
 """"""""""""""
 " set background=dark
-colorscheme base16-oceanicnext
+" colorscheme iceberg
+colorscheme onedark
 
 " activate true color support
 if (empty($TMUX))
@@ -158,6 +173,7 @@ map <s-h> :tabprevious<CR>
 map <s-l> :tabnext<CR>
 nnoremap <c-n> :nohl<CR>
 nnoremap <c-q> :pclose<CR>
+inoremap <c-q> <Esc>:pclose<CR>a
 nnoremap <space> za
 vnoremap <space> zf
 
@@ -182,6 +198,7 @@ command! Qa qall
 command! W w 
 command! Wq wq
 
+command Todo noautocmd vimgrep /TODO\|FIXME/j % | cw
 
 """"""""""""
 "" VimScript

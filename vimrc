@@ -100,7 +100,6 @@ let mapleader = ","
 "" Plugin Manager
 """""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'tpope/vim-surround'
@@ -209,8 +208,8 @@ function! ToggleShowWidth()
         let &cc = 0
         let &textwidth = 0
     else
-        let &cc = 120
-        let &textwidth = 119
+        let &cc = 100
+        let &textwidth = 99
     endif
 endfunc
 

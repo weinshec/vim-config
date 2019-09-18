@@ -9,8 +9,15 @@ snippet cout "Stdout stream"
 std::cout << ${1:__stream__} << '\n';
 endsnippet
 
-snippet #if "Header preprocessor statements"
-#ifndef ${1:__FILENAME_H__}
+global !p
+def random_header_uid():
+		from uuid import uuid4
+		uid_str = "H" + str(uuid4())[1:]
+		return uid_str.upper().replace("-", "_")
+endglobal
+
+snippet #ifndef "Random include guard"
+#ifndef ${1: `!p t[1]  = random_header_uid()`}
 #define $1
 
 $0
@@ -32,6 +39,13 @@ public:
 	$0
 private:
 
+};
+endsnippet
+
+snippet struct "struct declaration"
+struct ${1:Name}
+{
+	$0
 };
 endsnippet
 

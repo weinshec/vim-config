@@ -43,7 +43,6 @@ set smartcase
 set smarttab
 set splitbelow
 set splitright
-set t_Co=256
 set tabpagemax=50
 set tabstop=2
 set wildmenu
@@ -108,7 +107,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/rfc-syntax'
-Plug 'cocopon/iceberg.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 if isdirectory(expand("~/.fzf"))
@@ -125,17 +123,22 @@ runtime custom/fzf.vim
 runtime custom/lightline.vim
 runtime custom/lsp.vim
 runtime custom/ultisnips.vim
-
+runtime custom/vim-commentary.vim
+if (has("nvim"))
+  runtime custom/LanguageClient-neovim.vim
+endif
 
 """"""""""""""
 "" COLORSCHEME
 """"""""""""""
-" set background=dark
-" colorscheme iceberg
+set background=dark
+set t_Co=256
 colorscheme onedark
 
 " activate true color support
-if (empty($TMUX))
+" commenting out the $TMUX switch worked for tmux 2.6, neovim 0.3.8 and
+" termite v13-11 with TERM=xterm-termite outside and TERM=tmux-256color inside
+" if (empty($TMUX))
   if (has("nvim"))
     " old NEOVIM
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -144,7 +147,7 @@ if (empty($TMUX))
     " new NEOVIM and VIM>7.4.1770
     set termguicolors
   endif
-endif
+" endif
 
 
 """""""""""""""""
@@ -191,6 +194,7 @@ nmap <Leader>f0 :set foldenable foldlevel=0<CR>
 nmap <Leader>f1 :set foldenable foldlevel=1<CR>
 nmap <Leader>f2 :set foldenable foldlevel=2<CR>
 nmap <Leader>f3 :set foldenable foldlevel=3<CR>
+nmap <Leader>bd :b#<bar>bd#<CR>
 
 command! Q q
 command! Qa qall 
@@ -198,6 +202,14 @@ command! W w
 command! Wq wq
 
 command Todo noautocmd vimgrep /TODO\|FIXME/j % | cw
+
+
+""""""""""""""""""
+"" Omni-Completion
+""""""""""""""""""
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 
 """"""""""""
 "" VimScript

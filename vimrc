@@ -110,6 +110,7 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/rfc-syntax'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'jiangmiao/auto-pairs'
 if isdirectory(expand("~/.fzf"))
   Plug '~/.fzf'
   Plug 'junegunn/fzf.vim'

@@ -111,10 +111,9 @@ Plug 'vim-scripts/rfc-syntax'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
-if isdirectory(expand("~/.fzf"))
-  Plug '~/.fzf'
-  Plug 'junegunn/fzf.vim'
-endif
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+Plug 'ledger/vim-ledger'
 if (has("nvim"))
   Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 endif

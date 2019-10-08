@@ -70,7 +70,7 @@ au BufNewFile,BufRead *.tex set filetype=tex
 au BufNewFile,BufRead *.py set foldmethod=indent
 au BufNewFile,BufRead Project.meta set filetype=ruby
 au FileType py setlocal shiftwidth=4 tabstop=4
-
+au FileType cpp setlocal shiftwidth=4 tabstop=4
 
 """"""""""""""""
 "" Spellchecking

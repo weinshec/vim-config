@@ -70,7 +70,6 @@ au BufNewFile,BufRead *.tex set filetype=tex
 au BufNewFile,BufRead *.py set foldmethod=indent
 au BufNewFile,BufRead Project.meta set filetype=ruby
 au FileType py setlocal shiftwidth=4 tabstop=4
-au FileType cpp setlocal shiftwidth=4 tabstop=4 formatexpr= formatprg=clang-format\ -style=file
 
 
 """"""""""""""""
@@ -114,6 +113,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'ledger/vim-ledger'
+Plug 'rhysd/vim-clang-format'
 if (has("nvim"))
   Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 endif
@@ -125,6 +125,7 @@ runtime custom/lightline.vim
 runtime custom/lsp.vim
 runtime custom/ultisnips.vim
 runtime custom/vim-commentary.vim
+runtime custom/vim-clang-format.vim
 if (has("nvim"))
   runtime custom/LanguageClient-neovim.vim
 endif
@@ -219,10 +220,8 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 function! ToggleShowWidth()
     if &cc > 0
         let &cc = 0
-        let &textwidth = 0
     else
         let &cc = 100
-        let &textwidth = 99
     endif
 endfunc
 

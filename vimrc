@@ -108,6 +108,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/rfc-syntax'
 Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
@@ -135,7 +136,8 @@ endif
 """"""""""""""
 set background=dark
 set t_Co=256
-colorscheme onedark
+" colorscheme onedark
+colorscheme nord
 
 " activate true color support
 " commenting out the $TMUX switch worked for tmux 2.6, neovim 0.3.8 and

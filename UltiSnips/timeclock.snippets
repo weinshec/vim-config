@@ -1,0 +1,12 @@
+snippet i "check in"
+i `date '+%Y-%m-%d'` ${1:`date '+%H:%M'`}:00 ${2:tag}
+endsnippet
+
+snippet o "check out"
+o `date '+%Y-%m-%d'` ${1:`date '+%H:%M'`}:00
+endsnippet
+
+snippet oi "check out then in"
+o `date '+%Y-%m-%d'` ${1:`date '+%H:%M'`}:00
+i `date '+%Y-%m-%d'` $1:00 ${2:tag}
+endsnippet

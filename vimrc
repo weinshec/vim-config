@@ -107,14 +107,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/rfc-syntax'
-Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'ledger/vim-ledger'
 Plug 'rhysd/vim-clang-format'
+Plug 'christoomey/vim-tmux-navigator'
 if (has("nvim"))
   Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 endif
@@ -126,6 +126,7 @@ runtime custom/lightline.vim
 runtime custom/lsp.vim
 runtime custom/ultisnips.vim
 runtime custom/vim-commentary.vim
+runtime custom/vim-polyglot.vim
 runtime custom/vim-clang-format.vim
 if (has("nvim"))
   runtime custom/LanguageClient-neovim.vim

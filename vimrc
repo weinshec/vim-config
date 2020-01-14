@@ -115,6 +115,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ledger/vim-ledger'
 Plug 'rhysd/vim-clang-format'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'will133/vim-dirdiff'
 if (has("nvim"))
   Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 endif

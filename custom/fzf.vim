@@ -10,7 +10,7 @@ command! -bang -nargs=* Rg
   \   fzf#vim#with_preview(), <bang>0)
 
 
-nmap <Leader>fa :Rg <C-r><C-w><CR>
+nmap <Leader>fr :Rg <C-r><C-w><CR>
 nmap <Leader>fb :Buffers<CR>
 nmap <Leader>ff :Files<CR>
 nmap <Leader>ft :Tags <C-r><C-w><CR>

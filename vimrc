@@ -116,6 +116,7 @@ Plug 'ledger/vim-ledger'
 Plug 'rhysd/vim-clang-format'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'will133/vim-dirdiff'
+Plug 'godlygeek/tabular'
 if (has("nvim"))
   Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 endif
@@ -201,6 +202,7 @@ nmap <Leader>f1 :set foldenable foldlevel=1<CR>
 nmap <Leader>f2 :set foldenable foldlevel=2<CR>
 nmap <Leader>f3 :set foldenable foldlevel=3<CR>
 nmap <Leader>bd :b#<bar>bd#<CR>
+nmap <expr> <Leader>mq ':cfile ' . $CERR_LOCATION . '<CR>'
 
 command! Q q
 command! Qa qall 

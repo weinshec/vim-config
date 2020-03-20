@@ -5,38 +5,13 @@ My personal collection of vim configurations
 
 
 ## Description
-  
+
 This repository is intended to be a personal collection of VIM configurations
 and plugins. Since I have to work on serveral machines every day, I find it
 handy to have a central repository to collect configuration and plugin files.
 When now starting work on a new machine, it just takes one command to have my
 complete vim setup ready. And further, it is easy to propagate changes in the
 configuration to all the other installations.
-
-
-**The complete list of plugins:**
-+ vim-plug (https://github.com/junegunn/vim-plug)
-+ vim-one (https://github.com/rakr/vim-one)
-+ Lighline (https://github.com/itchyny/lightline.vim)
-+ CtrlP (https://github.com/kien/ctrlp.vim)
-+ colorizer (https://github.com/lilydjwg/colorizer)
-+ vim-surround (https://github.com/tpope/vim-surround)
-+ UltiSnips (https://github.com/SirVer/ultisnips)
-+ C++ highlighting (https://guthub.com/octol/vim-cpp-enhanced-highlight)
-+ fugitive (https://github.com/tpope/vim-fugitive)
-+ vim-dictcc (https://github.com/weinshec/vim-dictcc)
-+ vim-unimpaired (https://github.com/tpope/vim-unimpaired)
-+ lion.vim (https://github.com/tommcdo/vim-lion)
-+ commentary.vim (https://github.com/tpope/vim-commentary)
-
-*NeoVim only:*
-+ neomake (https://github.com/benekastah/neomake.vim)
-+ deoplete (https://github.com/Shougo/deoplete.nvim)
-+ deoplete-jedi (https://github.com/zchee/deoplete-jedi)
-
-
-For the documentation of each plugin, refer to the plugins help or github page.
-
 
 
 ## Installation
@@ -46,7 +21,12 @@ vimrc to your $HOME directory.
 
     cd $HOME
     git clone https://github.com/weinshec/vim-config .vim
+
+    # For vim:
     ln -s $HOME/.vim/vimrc $HOME/.vimrc
+
+    # For neovim:
+    ln -s $HOME/.vim $HOME/.config/nvim
 
 To initialize the plugins, simply run
 

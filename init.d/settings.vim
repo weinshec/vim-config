@@ -43,6 +43,7 @@ set splitbelow
 set splitright
 set tabpagemax=50
 set tabstop=2
+set textwidth=100
 set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip,*.pdf,*.d,*.cmdline,*.bake
 set wildmenu
 set wildmode=list:longest,full

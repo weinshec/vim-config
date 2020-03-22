@@ -4,10 +4,10 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " Toggle display of colored column
 function! ToggleShowWidth()
-    if &cc > 0
-        let &cc = 0
+    if &cc == ''
+      set cc=+1
     else
-        let &cc = 100
+      set cc=
     endif
 endfunc
 

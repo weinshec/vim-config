@@ -1,0 +1,13 @@
+snippet toc "Table Of Contents"
+.. toctree::
+	:caption: ${1:Table of contents}
+	:maxdepth: ${2:1}
+
+	$0
+endsnippet
+
+snippet h1 "Headline Level 1"
+${1:Title}
+`!p snip.rv = '=' * len(t[1])`
+$0
+endsnippet

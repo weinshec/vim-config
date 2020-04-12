@@ -4,4 +4,3 @@ source $HOME/.vim/init.d/functions.vim
 source $HOME/.vim/init.d/plugins.vim
 source $HOME/.vim/init.d/keybindings.vim
 source $HOME/.vim/init.d/colors.vim
-source $HOME/.vim/init.d/notes.vim

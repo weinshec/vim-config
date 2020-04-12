@@ -11,3 +11,13 @@ ${1:Title}
 `!p snip.rv = '=' * len(t[1])`
 $0
 endsnippet
+
+snippet h2 "Headline Level 2"
+${1:Title}
+`!p snip.rv = '-' * len(t[1])`
+$0
+endsnippet
+
+snippet doc "Reference to other document"
+:doc:\`$1\`$0
+endsnippet

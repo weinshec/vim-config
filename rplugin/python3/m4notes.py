@@ -32,7 +32,10 @@ class M4Notes(object):
 
     @pynvim.command("M4NotesIndex")
     def index(self, *args, **kvargs):
-        self.vim.command('vsplit {}'.format(os.path.join(self.path, self._index)))
+        if self.vim.current.buffer.name == "" and self.vim.current.buffer[:] == [""]:
+            self.vim.command('edit {}'.format(os.path.join(self.path, self._index)))
+        else:
+            self.vim.command('vsplit {}'.format(os.path.join(self.path, self._index)))
         self._buffer_local_bindings()
 
     @pynvim.command("M4NotesFollow")

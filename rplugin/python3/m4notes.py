@@ -1,3 +1,4 @@
+import glob
 import os
 import pynvim
 
@@ -64,6 +65,38 @@ class M4Notes(object):
 
         self.vim.command("edit {}".format(new_path))
         self._buffer_local_bindings()
+
+    @pynvim.command("M4NotesMake")
+    def make(self, *args, **kwargs):
+        self.vim.command("lcd {}".format(os.path.join(self.path, "../")))
+        self.vim.command("!make html")
+        self.vim.command("lcd -")
+
+    @pynvim.command("M4NotesShow")
+    def show(self, *args, **kwargs):
+        self.vim.command("silent !$BROWSER {} &".format(
+            os.path.join(self.path, "../build/html/index.html")))
+
+    @pynvim.command("M4NotesTree", nargs="?")
+    def show(self, args):
+        try:
+            depth = int(args[0])
+        except IndexError:
+            depth = 999
+        except ValueError:
+            depth = 999
+        finally:
+            if depth < 0:
+                depth = (-1) * depth
+
+        buf_dir = os.path.dirname(self.vim.current.buffer.name)
+        num_sep = buf_dir.count(os.path.sep)
+        self.vim.current.buffer.append("")
+        for file in glob.iglob(buf_dir + '/**/*' + self.ext, recursive=True):
+            num_sep_this = file.count(os.path.sep)
+            if num_sep_this - num_sep - 1 <= depth:
+                self.vim.current.buffer.append(
+                    os.path.relpath(file, start=self.path).rstrip(self.ext))
 
     def _prompt_user(self, message, default=None):
         self.vim.command("call inputsave()")

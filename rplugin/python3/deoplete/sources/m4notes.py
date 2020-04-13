@@ -12,10 +12,10 @@ class Source(deoplete.base.source.Base):
         self.rank = 450
         self.filetypes = ['rst']
 
-    def get_complete_position(self, context):
-        trigger_prefix = ":doc:`"
-        pos = context['input'].rfind(trigger_prefix)
-        return pos if pos < 0 else pos + len(trigger_prefix)
+    # def get_complete_position(self, context):
+    #     trigger_prefix = ":doc:`"
+    #     pos = context['input'].rfind(trigger_prefix)
+    #     return pos if pos < 0 else pos + len(trigger_prefix)
 
     def gather_candidates(self, context):
         contents = []

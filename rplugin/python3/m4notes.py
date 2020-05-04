@@ -72,8 +72,8 @@ class M4Notes(object):
         self.vim.command("!make html")
         self.vim.command("lcd -")
 
-    @pynvim.command("M4NotesShow")
-    def show(self, *args, **kwargs):
+    @pynvim.command("M4NotesShowHtml")
+    def show_html(self, *args, **kwargs):
         self.vim.command("silent !$BROWSER {} &".format(
             os.path.join(self.path, "../build/html/index.html")))
 

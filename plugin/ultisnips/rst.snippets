@@ -21,3 +21,27 @@ endsnippet
 snippet doc "Reference to other document"
 :doc:\`$1\`$0
 endsnippet
+
+snippet link "Hyperlink"
+\`<${1:Link}>\`_$0
+endsnippet
+
+snippet nlink "Named Hyperlink"
+\`${1:Name} <${2:Link}>\`_$0
+endsnippet
+
+snippet bf "boldface"
+**$1**$0
+endsnippet
+
+snippet it "italics"
+*$1*$0
+endsnippet
+
+snippet img "Image"
+.. image:: ${1:path}
+	:width: 250px
+	:align: center
+
+$0
+endsnippet

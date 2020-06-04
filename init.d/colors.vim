@@ -13,4 +13,12 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-" highlight! link Folded Comment
+" highlight yanked text for 1.5s
+if (has("nvim-0.5"))
+  augroup highlight_yank
+      autocmd!
+      autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 1500)
+  augroup END
+endif
+
+highlight! link Folded Comment

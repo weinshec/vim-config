@@ -15,11 +15,10 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/rfc-syntax'
 Plug 'will133/vim-dirdiff'
+Plug 'vimwiki/vimwiki'
 
-if (has("nvim"))
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  " TODO: Remove once native LSP support is merged with neovim 0.5.0
-  Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+if (has("nvim-0.5"))
+  Plug 'neovim/nvim-lsp'
 endif
 
 if (executable("go"))
@@ -27,4 +26,3 @@ if (executable("go"))
 endif
 
 call plug#end()
-

@@ -19,6 +19,7 @@ set gdefault
 set hidden
 set history=1000
 set ignorecase
+set inccommand=split
 set incsearch
 set laststatus=2
 set list
@@ -47,11 +48,6 @@ set textwidth=100
 set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip,*.pdf,*.d,*.cmdline,*.bake
 set wildmenu
 set wildmode=list:longest,full
-
-" neovim specifics
-if has('nvim')
-  set inccommand=nosplit
-endif
 
 " spellchecking
 if v:version >= 700

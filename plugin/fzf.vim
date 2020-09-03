@@ -4,6 +4,15 @@ if exists('g:plugs["fzf.vim"]')
     \ 'ctrl-s': 'split',
     \ 'ctrl-v': 'vsplit' }
 
+  function! s:list_cmd()
+    let base = fnamemodify(expand('%'), ':h:.:S')
+    return base == '.' ? 'fd -t f' : printf('fd -t f | proximity-sort %s', expand('%'))
+  endfunction
+
+  command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, {'source': s:list_cmd(),
+    \                               'options': '--tiebreak=index'}, <bang>0)
+
   command! -bang -nargs=* Rg
     \ call fzf#vim#grep(
     \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,

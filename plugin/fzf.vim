@@ -68,7 +68,7 @@ def getHdrImplFilename():
     name, ext = path.splitext(currentFile)
     return "{}{}".format(name, extmap.get(ext, ext))
 
-vim.command("call fzf#vim#files('.', {'options':'--query " + getHdrImplFilename() + "'})")
+vim.command("call fzf#vim#files('.', {'source': s:list_cmd(), 'options': '--tiebreak=index --query " + getHdrImplFilename() + "'})")
 
 endpython
 endfunc

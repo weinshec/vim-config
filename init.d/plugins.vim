@@ -8,7 +8,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ledger/vim-ledger'
 Plug 'Chiel92/vim-autoformat'
-Plug 'sheerun/vim-polyglot'
 Plug 'sirver/ultisnips'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -20,6 +19,7 @@ Plug 'vimwiki/vimwiki'
 
 if (has("nvim-0.5"))
   Plug 'neovim/nvim-lsp'
+  Plug 'nvim-treesitter/nvim-treesitter'
 endif
 
 if (executable("go"))

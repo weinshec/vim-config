@@ -7,6 +7,9 @@ if has('nvim')
   tnoremap jk <C-\><C-n>
 endif
 
+" remap fwd search to stay at word under cursor
+nnoremap * *N
+
 " navigation / views
 map <c-j> <c-w>j
 map <c-k> <c-w>k

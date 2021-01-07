@@ -4,7 +4,7 @@ lua <<EOF
 require'nvim-treesitter.configs'.setup {
 
   ensure_installed = {
-    "cpp", "css", "html", "javascript", "json", "markdown",
+    "cpp", "css", "html", "javascript", "json",
     "python", "rst", "ruby", "rust", "toml", "yaml"
   },
 
@@ -27,8 +27,7 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
-autocmd FileType cpp,python,vimwiki set foldmethod=expr
-autocmd FileType cpp,python,vimwiki set foldexpr=nvim_treesitter#foldexpr()
-let g:vimwiki_folding = 'custom'
+autocmd FileType cpp,python set foldmethod=expr
+autocmd FileType cpp,python set foldexpr=nvim_treesitter#foldexpr()
 
 endif

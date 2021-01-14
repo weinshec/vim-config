@@ -16,6 +16,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/rfc-syntax'
 Plug 'will133/vim-dirdiff'
 Plug 'vimwiki/vimwiki'
+Plug 'plasticboy/vim-markdown'
 
 if (has("nvim-0.5"))
   Plug 'neovim/nvim-lsp'

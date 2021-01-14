@@ -7,7 +7,7 @@ if exists('g:plugs["nvim-lsp"]')
   endif
 
   " cpp
-  if executable("clangd")
+  if executable("clangd") && filereadable("compile_commands.json")
     lua require'lspconfig'.clangd.setup({})
     autocmd Filetype cpp setlocal omnifunc=v:lua.vim.lsp.omnifunc
   endif

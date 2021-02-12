@@ -2,7 +2,19 @@ if exists('g:plugs["nvim-lsp"]')
 
   " rust
   if executable("rust-analyzer")
-    lua require'lspconfig'.rust_analyzer.setup({})
+lua << EOF
+local lsp = require'lspconfig'
+lsp.rust_analyzer.setup {
+    settings = {
+        ["rust-analyzer"] = {
+          diagnostics = {
+              enable = true,
+              disabled = {"unresolved-proc-macro"},
+          },
+        }
+    }
+}
+EOF
     autocmd Filetype rust setlocal omnifunc=v:lua.vim.lsp.omnifunc
   endif
 

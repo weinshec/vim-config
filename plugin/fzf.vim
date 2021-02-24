@@ -11,6 +11,17 @@ if exists('g:plugs["fzf.vim"]')
   nmap <Leader>fg :GFiles<CR>
   nmap <Leader>fi :call FzfFilesImplHdrFile()<CR>
   nmap <Leader>ft :Tags <C-r><C-w><CR>
+
+  if (executable("proximity-sort"))
+    function! s:list_cmd()
+      let base = fnamemodify(expand('%'), ':h:.:S')
+      return base == '.' ? 'fd -t f' : printf('fd -t f | proximity-sort %s', expand('%'))
+    endfunction
+
+    command! -bang -nargs=? -complete=dir Files
+      \ call fzf#vim#files(<q-args>,
+      \   fzf#vim#with_preview({'source': s:list_cmd(), 'options': '--tiebreak=index'}, <bang>0))
+  endif
 endif
 
 

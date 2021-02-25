@@ -21,6 +21,7 @@ Plug 'plasticboy/vim-markdown'
 if (has("nvim-0.5"))
   Plug 'neovim/nvim-lsp'
   Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'lua' }
 endif
 
 if (executable("go"))

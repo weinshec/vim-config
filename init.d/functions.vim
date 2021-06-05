@@ -33,3 +33,18 @@ function! MyFoldText()
     setlocal fillchars+=fold
     return printf('%s%*s', l:linetext, l:align, l:foldtext)
 endfunction
+
+" Show decimal and hex numbers under cursor
+nnoremap gn :call DecAndHex(expand("<cword>"))<CR>
+function! DecAndHex(number)
+  let ns = '[.,;:''"<>(){}\[\]^_U]'      " number separators
+  if a:number =~? '^' . ns. '*[-+]\?\d\+' . ns . '*$'
+     let dec = substitute(a:number, '[^0-9+-]*\([+-]\?\d\+\).*','\1','')
+     echo dec . printf('  ->  0x%X, 0b%08b', dec, dec)
+  elseif a:number =~? '^\w*' . ns. '*\(0x\|#\)\(\x\+\)' . ns . '*$'
+     let hex = substitute(a:number, '.\{-}\%\(0x\|#\)\(\x\+\).*','\1','')
+     echo '0x' . hex . printf('  ->  %d', eval('0x'.hex))
+  else
+     echo "NaN"
+  endif
+endfunction

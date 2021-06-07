@@ -37,7 +37,6 @@ set scrolloff=1
 set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winsize
 set shiftwidth=2
 set sidescroll=1
-set sidescrolloff=1
 set smartcase
 set smarttab
 set splitbelow

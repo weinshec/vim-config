@@ -21,7 +21,7 @@ Plug 'preservim/nerdtree'
 if (has("nvim-0.5"))
   Plug 'neovim/nvim-lsp'
   Plug 'nvim-treesitter/nvim-treesitter'
-  Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'lua' }
+  Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'christianchiarulli/nvcode-color-schemes.vim'
   Plug 'sindrets/diffview.nvim'
 else

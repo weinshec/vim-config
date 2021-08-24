@@ -16,7 +16,6 @@ Plug 'vim-scripts/rfc-syntax'
 Plug 'will133/vim-dirdiff'
 Plug 'vimwiki/vimwiki'
 Plug 'plasticboy/vim-markdown'
-Plug 'preservim/nerdtree'
 
 if (has("nvim-0.5"))
   Plug 'neovim/nvim-lsp'
@@ -30,6 +29,10 @@ endif
 
 if (executable("go"))
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+endif
+
+if (executable("ctags"))
+  Plug 'majutsushi/tagbar'
 endif
 
 call plug#end()

@@ -39,4 +39,4 @@ nmap <Leader>bd :b#<bar>bd#<CR>
 nmap <expr> <Leader>mq ':cfile ' . $CERR_LOCATION . '<CR>'
 
 " custom functions
-map <F8> :call ToggleShowWidth()<CR>
+map <F7> :call ToggleShowWidth()<CR>

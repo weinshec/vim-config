@@ -5,9 +5,9 @@ lua << EOF
 
   require'diffview'.setup {
     diff_binaries = false,    -- Show diffs for binaries
+    use_icons = false,        -- Requires nvim-web-devicons
     file_panel = {
-      width = 35,
-      use_icons = false        -- Requires nvim-web-devicons
+      width = 35
     },
     key_bindings = {
       -- The `view` bindings are active in the diff buffers, only when the current

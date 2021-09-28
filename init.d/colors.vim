@@ -3,7 +3,6 @@ set t_Co=256
 
 
 if (has("nvim-0.5"))
-  let g:nvcode_termcolors=256
   colorscheme nord
 else
   colorscheme nord

@@ -1,29 +1,27 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'Chiel92/vim-autoformat'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'godlygeek/tabular'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ledger/vim-ledger'
-Plug 'Chiel92/vim-autoformat'
+Plug 'plasticboy/vim-markdown'
 Plug 'sirver/ultisnips'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-scripts/rfc-syntax'
-Plug 'will133/vim-dirdiff'
 Plug 'vimwiki/vimwiki'
-Plug 'plasticboy/vim-markdown'
 Plug 'weinshec/vim-dictcc'
+Plug 'will133/vim-dirdiff'
 
 if (has("nvim-0.5"))
+  Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'neovim/nvim-lsp'
   Plug 'nvim-treesitter/nvim-treesitter'
-  Plug 'lukas-reineke/indent-blankline.nvim'
-  Plug 'christianchiarulli/nvcode-color-schemes.vim'
-  Plug 'sindrets/diffview.nvim'
+  Plug 'shaunsingh/nord.nvim'
 else
   Plug 'arcticicestudio/nord-vim'
 endif

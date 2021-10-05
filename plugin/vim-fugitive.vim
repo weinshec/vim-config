@@ -1,5 +1,5 @@
 if exists('g:plugs["vim-fugitive"]')
-  nnoremap <Leader>gs :tabnew +Gstatus<CR>
+  nnoremap <Leader>gs <cmd>tabnew +Git<CR>
 
   command! GHistory call s:view_git_history()
 

@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'arcticicestudio/nord-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'godlygeek/tabular'
@@ -21,9 +22,6 @@ if (has("nvim-0.5"))
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'neovim/nvim-lsp'
   Plug 'nvim-treesitter/nvim-treesitter'
-  Plug 'shaunsingh/nord.nvim'
-else
-  Plug 'arcticicestudio/nord-vim'
 endif
 
 if (executable("go"))

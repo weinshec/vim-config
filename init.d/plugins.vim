@@ -5,8 +5,6 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'godlygeek/tabular'
 Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'ledger/vim-ledger'
 Plug 'plasticboy/vim-markdown'
 Plug 'sirver/ultisnips'
@@ -17,6 +15,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vimwiki/vimwiki'
 Plug 'weinshec/vim-dictcc'
 Plug 'will133/vim-dirdiff'
+
+Plug 'voldikss/vim-floaterm'
 
 if (has("nvim-0.5"))
   Plug 'lukas-reineke/indent-blankline.nvim'

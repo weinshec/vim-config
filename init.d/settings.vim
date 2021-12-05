@@ -35,14 +35,14 @@ set printoptions=paper:A4,syntax:y,wrap:y,left:5pc,number:y
 set relativenumber
 set scrolloff=1
 set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winsize
-set shiftwidth=2
+set shiftwidth=4
 set sidescroll=1
 set smartcase
 set smarttab
 set splitbelow
 set splitright
 set tabpagemax=50
-set tabstop=2
+set tabstop=4
 set textwidth=100
 set wildignore+=*.root,*.tar.gz,*.o,*.so,*.zip,*.pdf,*.d,*.cmdline,*.bake
 set wildmenu

@@ -3,9 +3,9 @@ let mapleader = ","
 
 " remap escape key
 inoremap jk <Esc>
-if has('nvim')
-  tnoremap jk <C-\><C-n>
-endif
+" if has('nvim')
+"   tnoremap jk <C-\><C-n>
+" endif
 
 " remap fwd search to stay at word under cursor
 nnoremap * *N

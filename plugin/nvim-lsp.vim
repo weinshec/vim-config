@@ -26,10 +26,12 @@ EOF
 
   nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
   nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-  nnoremap <silent> ]d    <cmd>lua vim.lsp.diagnostic.goto_next { wrap = false }<CR>
-  nnoremap <silent> [d    <cmd>lua vim.lsp.diagnostic.goto_prev { wrap = false }<CR>
-
   nnoremap <silent> gh    <cmd>lua vim.lsp.buf.signature_help()<CR>
+
+  nnoremap <silent> ]d    <cmd>lua vim.diagnostic.goto_next()<CR>
+  nnoremap <silent> [d    <cmd>lua vim.diagnostic.goto_prev()<CR>
+  nnoremap <silent> <leader>dq <cmd>lua vim.diagnostic.setqflist()<CR>
+  nnoremap <silent> <leader>dl <cmd>lua vim.diagnostic.setloclist()<CR>
 
 
 endif

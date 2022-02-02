@@ -1,5 +1,14 @@
 if exists('g:plugs["nvim-lsp"]')
 
+  " global config
+lua << EOF
+vim.diagnostic.config({
+    virtual_text = false,
+    signs = true,
+    float = { border = "single" },
+})
+EOF
+
   " rust
   if executable("rust-analyzer")
 lua << EOF
@@ -24,6 +33,7 @@ EOF
     autocmd Filetype cpp setlocal omnifunc=v:lua.vim.lsp.omnifunc
   endif
 
+  " mappings
   nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
   nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
   nnoremap <silent> gh    <cmd>lua vim.lsp.buf.signature_help()<CR>

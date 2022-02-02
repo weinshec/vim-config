@@ -14,4 +14,6 @@ if exists('g:plugs["vimwiki"]')
   let g:vimwiki_markdown_link_ext = 1
   let g:vimwiki_filetypes = ['markdown']
 
+  command! VimwikiPandoc ! pandoc -o ~/scratch/%:t:r.pdf --from markdown --template eisvogel --listings %
+
 endif

@@ -5,7 +5,7 @@ require'nvim-treesitter.configs'.setup {
 
   ensure_installed = {
     "bash", "c", "cpp", "css", "html", "javascript", "json", "ledger",
-    "lua", "python", "rst", "ruby", "rust", "toml", "yaml"
+    "lua", "markdown", "python", "rst", "ruby", "rust", "toml", "yaml"
   },
 
   highlight = {

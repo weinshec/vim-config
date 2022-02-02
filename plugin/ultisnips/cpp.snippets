@@ -12,7 +12,7 @@ endsnippet
 global !p
 def random_header_uid():
 		from uuid import uuid4
-		uid_str = "H" + str(uuid4())[1:]
+		uid_str = "GUARD_" + str(uuid4())
 		return uid_str.upper().replace("-", "_")
 endglobal
 

@@ -1,0 +1,13 @@
+snippet <t "title line"
+<t5 `!p snip.rv = " " * int((96 - len(t[1])) / 2)`${1:title}`!p snip.rv = " " * int((96 - len(t[1]) + 1) / 2)`>
+$0
+endsnippet
+
+snippet --- "yaml header"
+---
+title:    ${1:title}
+date:     `date +%Y-%m-%d`
+keywords: [${2:keywords}]
+---
+$0
+endsnippet

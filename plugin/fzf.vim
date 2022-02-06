@@ -4,13 +4,15 @@ if exists('g:plugs["fzf.vim"]')
     \ 'ctrl-s': 'split',
     \ 'ctrl-v': 'vsplit' }
 
+  let $FZF_DEFAULT_OPTS="--bind shift-up:preview-half-page-up,shift-down:preview-half-page-down"
+
+  let g:fzf_layout = { 'down': '50%' }
 
   nmap <Leader>fr :Rg <C-r><C-w><CR>
   nmap <Leader>fb :Buffers<CR>
   nmap <Leader>ff :Files<CR>
   nmap <Leader>fg :GFiles<CR>
   nmap <Leader>fi :call FzfFilesImplHdrFile()<CR>
-  nmap <Leader>ft :Tags <C-r><C-w><CR>
 
   if (executable("proximity-sort"))
     function! s:list_cmd()

@@ -15,7 +15,11 @@ Plug 'vimwiki/vimwiki'
 Plug 'weinshec/vim-dictcc'
 Plug 'will133/vim-dirdiff'
 
-Plug 'voldikss/vim-floaterm'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 
 if (has("nvim-0.5"))
   Plug 'lukas-reineke/indent-blankline.nvim'

@@ -7,6 +7,7 @@ if exists('g:plugs["fzf.vim"]')
   let $FZF_DEFAULT_OPTS="--bind shift-up:preview-half-page-up,shift-down:preview-half-page-down"
 
   let g:fzf_layout = { 'down': '50%' }
+  let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 
   nmap <Leader>fr :Rg <C-r><C-w><CR>
   nmap <Leader>fb :Buffers<CR>
@@ -22,7 +23,7 @@ if exists('g:plugs["fzf.vim"]')
 
     command! -bang -nargs=? -complete=dir Files
       \ call fzf#vim#files(<q-args>,
-      \   fzf#vim#with_preview({'source': s:list_cmd(), 'options': '--tiebreak=index'}, <bang>0))
+      \   fzf#vim#with_preview({'source': s:list_cmd(), 'options': '--tiebreak=index'}))
   endif
 endif
 

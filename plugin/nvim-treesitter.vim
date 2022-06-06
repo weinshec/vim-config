@@ -1,11 +1,12 @@
 if exists('g:plugs["nvim-treesitter"]') 
 
 lua <<EOF
+require'tree-sitter-just'.setup{}
 require'nvim-treesitter.configs'.setup {
 
   ensure_installed = {
-    "bash", "c", "cpp", "css", "html", "javascript", "json", "ledger",
-    "lua", "markdown", "python", "rst", "ruby", "rust", "toml", "yaml"
+    "bash", "c", "cpp", "css", "html", "javascript", "json", "just", "ledger",
+    "lua", "markdown", "python", "rst", "ruby", "rust", "toml", "yaml",
   },
 
   highlight = {

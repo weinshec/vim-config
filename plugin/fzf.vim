@@ -9,7 +9,8 @@ if exists('g:plugs["fzf.vim"]')
   let g:fzf_layout = { 'down': '50%' }
   let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 
-  nmap <Leader>fr :Rg <C-r><C-w><CR>
+  nmap <Leader>rr :Rg <C-r><C-w><CR>
+  nmap <Leader>rg :GRg <C-r><C-w><CR>
   nmap <Leader>fb :Buffers<CR>
   nmap <Leader>ff :Files<CR>
   nmap <Leader>fg :GFiles<CR>
@@ -25,6 +26,10 @@ if exists('g:plugs["fzf.vim"]')
       \ call fzf#vim#files(<q-args>,
       \   fzf#vim#with_preview({'source': s:list_cmd(), 'options': '--tiebreak=index'}))
   endif
+
+  command! -bang -nargs=* GRg
+    \ call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'dir': system('git -C '.expand('%:p:h').' rev-parse --show-toplevel 2> /dev/null')[:-2]}, <bang>0)
+
 endif
 
 

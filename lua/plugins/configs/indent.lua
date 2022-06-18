@@ -15,6 +15,7 @@ indent.setup {
         "vimwiki",
         "markdown",
         "txt",
+        "text",
         "help",
         "git",
         "", -- for all buffers without a file type

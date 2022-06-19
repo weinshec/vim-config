@@ -29,6 +29,7 @@ local options = {
     swapfile = false,
     tabstop = 2,
     termguicolors = true,
+    textwidth = 100,
     undodir = "/tmp/.nvimdid",
     undofile = true,
     updatetime = 250,

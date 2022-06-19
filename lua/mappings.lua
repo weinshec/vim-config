@@ -12,3 +12,4 @@ vim.keymap.set("n", "<c-n>", ":nohl<CR>")
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
+vim.keymap.set("", "<F7>", ":ToggleShowWidth<CR>")

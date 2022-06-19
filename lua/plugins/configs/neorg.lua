@@ -1,4 +1,4 @@
-local ok, indent = pcall(require, "neorg")
+local ok, neorg = pcall(require, "neorg")
 
 if not ok then
     return

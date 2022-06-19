@@ -79,6 +79,7 @@ return packer.startup(function(use)
     use { "tpope/vim-surround" }
     use { "tpope/vim-unimpaired" }
     use { "numToStr/Comment.nvim", config = require "plugins.configs.comment" }
+    use { "sirver/ultisnips", config = require "plugins.configs.ultisnips" }
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()

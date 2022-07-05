@@ -5,7 +5,7 @@ vim.g.mapleader = ","
 vim.cmd [[filetype plugin indent on]]
 
 local options = {
-    clipboard = "unnamedplus",
+    clipboard = "unnamed",
     cursorline = true,
     expandtab = true,
     fileencoding = "utf-8",
@@ -40,6 +40,7 @@ for key, value in pairs(options) do
 end
 
 utils.setSpacesSize {
+    cmake = 2,
 	lua = 4,
 	go = 4,
 	python = 4, 

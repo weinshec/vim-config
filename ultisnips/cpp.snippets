@@ -12,8 +12,7 @@ endsnippet
 global !p
 def random_header_uid():
 		from uuid import uuid4
-		uid_str = "GUARD_" + str(uuid4())
-		return uid_str.upper().replace("-", "_")
+		return str(uuid4).upper().replace("-", "_")
 endglobal
 
 snippet #ifndef "Random include guard"
@@ -99,6 +98,12 @@ snippet dx "inline doxygen comment"
 ///< ${1:descirption}
 endsnippet
 
-snippet sup "Axivion suppression comment"
-// suppress ${1:misra} ${2:0.0.0} ${3:next_construct}: ${4:justification}
+snippet cpp "C++ extern C guard"
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
+$0#if defined(__cplusplus)
+} // extern "C"
+#endif
 endsnippet

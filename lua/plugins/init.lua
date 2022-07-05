@@ -80,6 +80,11 @@ return packer.startup(function(use)
     use { "tpope/vim-unimpaired" }
     use { "numToStr/Comment.nvim", config = require "plugins.configs.comment" }
     use { "sirver/ultisnips", config = require "plugins.configs.ultisnips" }
+    use {
+        "folke/todo-comments.nvim",
+        requires = "nvim-lua/plenary.nvim",
+        config = require "plugins.configs.todo",
+    }
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()

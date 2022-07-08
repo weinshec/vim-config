@@ -13,3 +13,6 @@ vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
 vim.keymap.set("", "<F7>", ":ToggleShowWidth<CR>")
+
+vim.keymap.set("n", "<leader>nf",    ":set nofoldenable<CR>")
+vim.keymap.set("n", "<leader>s",     ":set spell!<CR>")

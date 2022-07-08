@@ -85,6 +85,7 @@ return packer.startup(function(use)
         requires = "nvim-lua/plenary.nvim",
         config = require "plugins.configs.todo",
     }
+    use { "tpope/vim-fugitive" }
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()

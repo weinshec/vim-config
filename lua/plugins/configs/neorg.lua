@@ -10,7 +10,12 @@ neorg.setup {
         ['core.keybinds'] = {
             config = {
                 default_keybinds = true,
-                neorg_leader = '<Leader>'
+                neorg_leader = '<Leader>',
+                hook = function(keybinds)
+                    keybinds.map("norg", "n", "<Leader>jj", ":Neorg journal today<cr>")
+                    keybinds.map("norg", "n", "<Leader>jt", ":Neorg journal tomorrow<cr>")
+                    keybinds.map("norg", "n", "<Leader>jy", ":Neorg journal yesterday<cr>")
+                end,
             }
         },
         ["core.norg.dirman"] = {
@@ -58,3 +63,5 @@ neorg.setup {
         },
     }
 }
+
+vim.keymap.set("n", "<leader>ww", ":NeorgStart<CR>")

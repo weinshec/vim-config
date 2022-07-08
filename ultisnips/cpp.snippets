@@ -12,7 +12,8 @@ endsnippet
 global !p
 def random_header_uid():
 		from uuid import uuid4
-		return str(uuid4).upper().replace("-", "_")
+		uuid = str(uuid4()).upper().replace("-", "_")
+		return "C" + uuid[1:]
 endglobal
 
 snippet #ifndef "Random include guard"
@@ -21,7 +22,7 @@ snippet #ifndef "Random include guard"
 
 $0
 
-#endif /* $1 */
+#endif // $1
 endsnippet
 
 snippet ns "namespace"

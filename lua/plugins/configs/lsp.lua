@@ -1,4 +1,4 @@
-local ok, comment = pcall(require, "lspconfig")
+local ok, lsp = pcall(require, "lspconfig")
 
 if not ok then
     return
@@ -42,7 +42,8 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
-require('lspconfig')['rust_analyzer'].setup{
+
+lsp.rust_analyzer.setup{
     on_attach = on_attach,
     flags = lsp_flags,
     -- Server-specific settings...
@@ -50,3 +51,5 @@ require('lspconfig')['rust_analyzer'].setup{
       ["rust-analyzer"] = {}
     }
 }
+
+lsp.clangd.setup{}

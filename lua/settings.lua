@@ -6,6 +6,7 @@ vim.cmd [[filetype plugin indent on]]
 
 local options = {
     clipboard = "unnamed",
+    completeopt = "menu",
     cursorline = true,
     expandtab = true,
     fileencoding = "utf-8",

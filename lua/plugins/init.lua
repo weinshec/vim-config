@@ -55,12 +55,13 @@ return packer.startup(function(use)
     -- LSP
     use {
         "neovim/nvim-lspconfig",
-        config = require "plugins.configs.lsp", 
+        config = require "plugins.configs.lsp",
     }
 
     -- filetypes
     use {
         "nvim-neorg/neorg",
+        tag = "0.0.12",  -- FIXME: Remove this barrier after nvim 0.8.0 is available
         requires = {
             "nvim-lua/plenary.nvim",
         },

@@ -61,7 +61,6 @@ return packer.startup(function(use)
     -- filetypes
     use {
         "nvim-neorg/neorg",
-        tag = "0.0.12",  -- FIXME: Remove this barrier after nvim 0.8.0 is available
         requires = {
             "nvim-lua/plenary.nvim",
         },

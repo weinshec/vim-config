@@ -21,7 +21,7 @@ vimrc to your $HOME directory.
 To initialize the plugins, simply run
 
     # For vim:
-    :PluginInstall
+    :PlugInstall
 
     # For neovim:
     :PackerInstall

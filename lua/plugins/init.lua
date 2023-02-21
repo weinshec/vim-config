@@ -35,7 +35,7 @@ return packer.startup(function(use)
     use { "wbthomason/packer.nvim" }
 
     -- ui
-    use { "rmehri01/onenord.nvim", config = require "plugins.configs.onenord" }
+    use { "AlexvZyl/nordic.nvim", config = require "plugins.configs.nordic"}
     use { "lukas-reineke/indent-blankline.nvim", config = require "plugins.configs.indent" }
     use { "nvim-lualine/lualine.nvim",
         config = require "plugins.configs.lualine",

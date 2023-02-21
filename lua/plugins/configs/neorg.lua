@@ -56,11 +56,11 @@ neorg.setup {
                 }
             }
         },
-        ["core.gtd.base"] = {
-            config = {
-                workspace = "notes",
-            },
-        },
+        -- ["core.gtd.base"] = {
+        --     config = {
+        --         workspace = "notes",
+        --     },
+        -- },
     }
 }
 

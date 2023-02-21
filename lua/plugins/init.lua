@@ -89,6 +89,7 @@ return packer.startup(function(use)
     use { "sbdchd/neoformat",
         config = require "plugins.configs.neoformat",
     }
+    use { "weinshec/vim-dictcc" }
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()

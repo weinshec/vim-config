@@ -18,7 +18,7 @@ neorg.setup {
                 end,
             }
         },
-        ["core.norg.dirman"] = {
+        ["core.dirman"] = {
             config = {
                 workspaces = {
                     notes = "~/notes",
@@ -26,14 +26,14 @@ neorg.setup {
                 autochdir = true,
             }
         },
-        ["core.norg.concealer"] = {},
-        ["core.norg.journal"] = {
+        ["core.concealer"] = {},
+        ["core.journal"] = {
             config = {
                 workspace = "notes",
                 strategy = "flat",
             }
         },
-        ["core.norg.esupports.metagen"] = {
+        ["core.esupports.metagen"] = {
             config = {
                 type = "auto",
                 template = {

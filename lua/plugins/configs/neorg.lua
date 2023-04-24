@@ -64,4 +64,5 @@ neorg.setup {
     }
 }
 
-vim.keymap.set("n", "<leader>ww", ":NeorgStart<CR>")
+vim.keymap.set("n", "<leader>ww", ":Neorg workspace notes<CR>")
+vim.keymap.set("n", "<leader>jj", ":Neorg journal today<CR>")

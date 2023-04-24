@@ -1,6 +1,12 @@
-vim.g.neoformat_clangformat = {
+vim.g.neoformat_cpp_clangformat = {
     ["exe"]   = "clang-format",
-    ["args"]  = "-style=file",
+    ["args"]  = {"-style=file"},
+    ["stdin"] = 1,
+}
+
+vim.g.neoformat_rust_rustfmt = {
+    ["exe"]   = "rustfmt",
+    ["args"]  = {"--edition 2021"},
     ["stdin"] = 1,
 }
 

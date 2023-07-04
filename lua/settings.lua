@@ -40,6 +40,8 @@ for key, value in pairs(options) do
     vim.opt[key] = value
 end
 
+vim.opt.diffopt:append("linematch:60")
+
 utils.setSpacesSize {
     cmake = 2,
 	lua = 4,

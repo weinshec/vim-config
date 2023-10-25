@@ -58,15 +58,6 @@ return packer.startup(function(use)
         config = require "plugins.configs.lsp",
     }
 
-    -- filetypes
-    use {
-        "nvim-neorg/neorg",
-        requires = {
-            "nvim-lua/plenary.nvim",
-        },
-        config = require "plugins.configs.neorg",
-    }
-
     -- utilities
     use { "junegunn/fzf",
         requires = {

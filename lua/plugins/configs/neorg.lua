@@ -52,7 +52,6 @@ neorg.setup {
                             return os.date("%Y-%m-%d")
                         end,
                     },
-                    { "version", require("neorg.config").version },
                 }
             }
         },

@@ -51,6 +51,7 @@ return packer.startup(function(use)
         run = ":TSUpdate",
         config = require "plugins.configs.treesitter",
     }
+    use { "NoahTheDuke/vim-just" }
 
     -- LSP
     use {
@@ -77,8 +78,11 @@ return packer.startup(function(use)
         config = require "plugins.configs.todo",
     }
     use { "tpope/vim-fugitive" }
-    use { "sbdchd/neoformat",
-        config = require "plugins.configs.neoformat",
+    -- use { "sbdchd/neoformat",
+    --     config = require "plugins.configs.neoformat",
+    -- }
+    use { "mhartington/formatter.nvim",
+        config = require "plugins.configs.formatter",
     }
     use { "weinshec/vim-dictcc" }
 

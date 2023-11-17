@@ -1,7 +1,7 @@
 vim.g.neoformat_cpp_clangformat = {
     ["exe"]   = "clang-format",
     ["args"]  = {"-style=file"},
-    ["stdin"] = 1,
+    ["stdin"] = 0,
 }
 
 vim.g.neoformat_rust_rustfmt = {

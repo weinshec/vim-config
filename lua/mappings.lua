@@ -16,3 +16,6 @@ vim.keymap.set("", "<F7>", ":ToggleShowWidth<CR>")
 
 vim.keymap.set("n", "<leader>nf",    ":set nofoldenable<CR>")
 vim.keymap.set("n", "<leader>s",     ":set spell!<CR>")
+
+vim.keymap.set("n", "<leader>hr",    ":%!xxd -g1<CR> :set filetype=xxd<CR>")
+vim.keymap.set("n", "<Leader>hw",    ":%!xxd -r<CR> :set binary<CR> :set filetype=<CR>")

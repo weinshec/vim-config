@@ -14,7 +14,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vimwiki/vimwiki'
 Plug 'weinshec/vim-dictcc'
 Plug 'will133/vim-dirdiff'
-Plug 'm42e/trace32-practice.vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

@@ -19,7 +19,6 @@ set gdefault
 set hidden
 set history=1000
 set ignorecase
-set inccommand=split
 set incsearch
 set laststatus=2
 set list
